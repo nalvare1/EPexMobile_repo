@@ -75,7 +75,7 @@
         <!--Detail View Controller-->
         <scene sceneID="gy6-gY-0yv">
             <objects>
-                <viewController id="2Fo-lD-Jjj" customClass="DetailViewController" customModule="EPex_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Fo-lD-Jjj" customClass="DetailViewController" customModule="EPex_Mobile_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u1w-FR-x4Q"/>
                         <viewControllerLayoutGuide type="bottom" id="rMV-El-hny"/>
@@ -98,7 +98,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uz-4Y-44L" id="uoY-8v-E4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -219,7 +219,7 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="ZlA-nt-Pfo">
             <objects>
-                <viewController id="Oh5-WG-lSL" customClass="SplashScreenViewController" customModule="EPex_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Oh5-WG-lSL" customClass="SplashScreenViewController" customModule="EPex_Mobile_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F7t-0q-VEr"/>
                         <viewControllerLayoutGuide type="bottom" id="bKU-rI-4I9"/>

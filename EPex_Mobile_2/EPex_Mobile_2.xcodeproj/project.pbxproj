@@ -14,6 +14,8 @@
 		18A0578E1EF04A7900E0724A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */; };
 		18A057971EF04ABF00E0724A /* General_Electric_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A057961EF04ABF00E0724A /* General_Electric_logo.svg.png */; };
 		18A057991EF04AC200E0724A /* GE Inspira Regular.exe in Resources */ = {isa = PBXBuildFile; fileRef = 18A057981EF04AC200E0724A /* GE Inspira Regular.exe */; };
+		18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579A1EF04E7100E0724A /* DetailViewController.swift */; };
+		18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		18A057951EF04ABB00E0724A /* GE Inspira Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE Inspira Regular.ttf"; sourceTree = "<group>"; };
 		18A057961EF04ABF00E0724A /* General_Electric_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General_Electric_logo.svg.png; sourceTree = "<group>"; };
 		18A057981EF04AC200E0724A /* GE Inspira Regular.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE Inspira Regular.exe"; sourceTree = "<group>"; };
+		18A0579A1EF04E7100E0724A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 			children = (
 				18A057831EF04A7900E0724A /* AppDelegate.swift */,
 				18A057851EF04A7900E0724A /* ViewController.swift */,
+				18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */,
+				18A0579A1EF04E7100E0724A /* DetailViewController.swift */,
 				18A057871EF04A7900E0724A /* Main.storyboard */,
 				18A0578A1EF04A7900E0724A /* Assets.xcassets */,
 				18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */,
@@ -147,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */,
 				18A057861EF04A7900E0724A /* ViewController.swift in Sources */,
+				18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */,
 				18A057841EF04A7900E0724A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +320,7 @@
 				18A057941EF04A7900E0724A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
