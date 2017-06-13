@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18702F5A1EF067FF00B2ACF9 /* EPex_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18702F591EF067FF00B2ACF9 /* EPex_Logo.png */; };
 		18A057841EF04A7900E0724A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A057831EF04A7900E0724A /* AppDelegate.swift */; };
 		18A057861EF04A7900E0724A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A057851EF04A7900E0724A /* ViewController.swift */; };
 		18A057891EF04A7900E0724A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A057871EF04A7900E0724A /* Main.storyboard */; };
@@ -16,9 +17,11 @@
 		18A057991EF04AC200E0724A /* GE Inspira Regular.exe in Resources */ = {isa = PBXBuildFile; fileRef = 18A057981EF04AC200E0724A /* GE Inspira Regular.exe */; };
 		18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579A1EF04E7100E0724A /* DetailViewController.swift */; };
 		18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */; };
+		18A0579F1EF05A9300E0724A /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579E1EF05A9300E0724A /* ProjectsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18702F591EF067FF00B2ACF9 /* EPex_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EPex_Logo.png; sourceTree = "<group>"; };
 		18A057801EF04A7900E0724A /* EPex_Mobile_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPex_Mobile_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A057831EF04A7900E0724A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A057851EF04A7900E0724A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		18A057981EF04AC200E0724A /* GE Inspira Regular.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE Inspira Regular.exe"; sourceTree = "<group>"; };
 		18A0579A1EF04E7100E0724A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		18A0579E1EF05A9300E0724A /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsTableViewCell.swift; path = ../ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 				18A057951EF04ABB00E0724A /* GE Inspira Regular.ttf */,
 				18A057961EF04ABF00E0724A /* General_Electric_logo.svg.png */,
 				18A057981EF04AC200E0724A /* GE Inspira Regular.exe */,
+				18702F591EF067FF00B2ACF9 /* EPex_Logo.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +71,7 @@
 		18A057821EF04A7900E0724A /* EPex_Mobile_2 */ = {
 			isa = PBXGroup;
 			children = (
+				18A0579E1EF05A9300E0724A /* ProjectsTableViewCell.swift */,
 				18A057831EF04A7900E0724A /* AppDelegate.swift */,
 				18A057851EF04A7900E0724A /* ViewController.swift */,
 				18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */,
@@ -141,6 +147,7 @@
 				18A0578E1EF04A7900E0724A /* LaunchScreen.storyboard in Resources */,
 				18A0578B1EF04A7900E0724A /* Assets.xcassets in Resources */,
 				18A057991EF04AC200E0724A /* GE Inspira Regular.exe in Resources */,
+				18702F5A1EF067FF00B2ACF9 /* EPex_Logo.png in Resources */,
 				18A057971EF04ABF00E0724A /* General_Electric_logo.svg.png in Resources */,
 				18A057891EF04A7900E0724A /* Main.storyboard in Resources */,
 			);
@@ -155,6 +162,7 @@
 			files = (
 				18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */,
 				18A057861EF04A7900E0724A /* ViewController.swift in Sources */,
+				18A0579F1EF05A9300E0724A /* ProjectsTableViewCell.swift in Sources */,
 				18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */,
 				18A057841EF04A7900E0724A /* AppDelegate.swift in Sources */,
 			);
@@ -279,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 3TZ48YZ6N3;
 				INFOPLIST_FILE = EPex_Mobile_2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -292,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 3TZ48YZ6N3;
 				INFOPLIST_FILE = EPex_Mobile_2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Oh5-WG-lSL">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,29 +24,35 @@
                         <viewControllerLayoutGuide type="bottom" id="Lfc-BG-5ys"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6PT-Ix-My8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-vK-lUJ">
-                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
-                                <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-vK-lUJ" customClass="ProjectsTableViewCell">
+                                <rect key="frame" x="0.0" y="85" width="320" height="483"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.050723220909999998" green="0.0064513355309999999" blue="0.15221941310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell" id="cUp-aF-N3g">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell" id="O2j-ti-pcb">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cUp-aF-N3g" id="OnQ-ne-tQY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O2j-ti-pcb" id="uAW-Nl-FSH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="2Fo-lD-Jjj" kind="show" identifier="mySegue" id="uoA-O4-mbo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GID-IA-m7S" id="vhW-HX-jH0"/>
+                                    <outlet property="delegate" destination="GID-IA-m7S" id="czb-FU-mpk"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntk-B9-YIa">
-                                <rect key="frame" x="16" y="20" width="343" height="35"/>
+                                <rect key="frame" x="16" y="20" width="288" height="35"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,12 +71,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="table" destination="CM2-vK-lUJ" id="YVz-f3-n0M"/>
+                        <outlet property="table" destination="CM2-vK-lUJ" id="H76-Kb-SCL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqR-Ua-Enn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244" y="29"/>
+            <point key="canvasLocation" x="1193" y="35"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gy6-gY-0yv">
@@ -81,39 +87,32 @@
                         <viewControllerLayoutGuide type="bottom" id="rMV-El-hny"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aOz-QJ-VNo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Complete A Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88n-wp-SHn">
-                                <rect key="frame" x="16" y="429" width="343" height="45"/>
+                                <rect key="frame" x="16" y="415" width="288" height="45"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GFa-Y6-1qD">
-                                <rect key="frame" x="16" y="105" width="343" height="302"/>
+                                <rect key="frame" x="16" y="105" width="288" height="302"/>
                                 <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell2" id="9uz-4Y-44L">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uz-4Y-44L" id="uoY-8v-E4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-09-ev7">
-                                <rect key="frame" x="167" y="524" width="41" height="36"/>
-                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBB-tl-yAf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="Q1x-2E-qYL">
                                         <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="1xB-fx-VYI">
@@ -124,49 +123,52 @@
                                                 <state key="normal" title="Return Home">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="GID-IA-m7S" kind="show" id="1RP-UO-QYB"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHa-Ee-tkJ">
-                                <rect key="frame" x="257" y="482" width="47" height="30"/>
+                                <rect key="frame" x="257" y="468" width="47" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-si-muf">
-                                <rect key="frame" x="191" y="482" width="47" height="30"/>
+                                <rect key="frame" x="191" y="468" width="47" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-1P-H1W">
-                                <rect key="frame" x="122" y="482" width="47" height="30"/>
+                                <rect key="frame" x="122" y="468" width="47" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgk-6u-bXz">
-                                <rect key="frame" x="236" y="482" width="23" height="30"/>
+                                <rect key="frame" x="236" y="468" width="23" height="30"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjF-W1-QWX">
-                                <rect key="frame" x="169" y="482" width="23" height="30"/>
+                                <rect key="frame" x="169" y="468" width="23" height="30"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4y-pT-Jo1">
-                                <rect key="frame" x="85" y="482" width="23" height="30"/>
+                                <rect key="frame" x="85" y="468" width="23" height="30"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSt-PH-rBu">
-                                <rect key="frame" x="16" y="482" width="69" height="30"/>
+                                <rect key="frame" x="16" y="468" width="69" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -177,32 +179,60 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-EI-g7V">
+                                <rect key="frame" x="166" y="585" width="164" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIl-ia-dk5">
+                                <rect key="frame" x="16" y="539" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-09-ev7">
+                                <rect key="frame" x="139.5" y="506" width="41" height="36"/>
+                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSave:" destination="2Fo-lD-Jjj" eventType="touchUpInside" id="lPP-pX-Q9R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sqm-si-muf" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="0Re-jV-ghg"/>
+                            <constraint firstItem="eIl-ia-dk5" firstAttribute="centerX" secondItem="aOz-QJ-VNo" secondAttribute="centerX" id="3BI-3F-K6A"/>
                             <constraint firstItem="L2e-7x-t8p" firstAttribute="top" secondItem="wBB-tl-yAf" secondAttribute="bottom" constant="8" id="3lP-Kr-rZE"/>
                             <constraint firstItem="88n-wp-SHn" firstAttribute="centerX" secondItem="aOz-QJ-VNo" secondAttribute="centerX" id="40l-dl-s2J"/>
                             <constraint firstItem="GFa-Y6-1qD" firstAttribute="trailing" secondItem="aOz-QJ-VNo" secondAttribute="trailingMargin" id="6DW-7l-CLH"/>
                             <constraint firstItem="EjF-W1-QWX" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="8RC-dq-Wb5"/>
                             <constraint firstItem="L2e-7x-t8p" firstAttribute="leading" secondItem="aOz-QJ-VNo" secondAttribute="leadingMargin" id="91u-p9-LUQ"/>
                             <constraint firstItem="cI0-1P-H1W" firstAttribute="leading" secondItem="v4y-pT-Jo1" secondAttribute="trailing" constant="14" id="BdH-0W-q7h"/>
+                            <constraint firstItem="88n-wp-SHn" firstAttribute="top" secondItem="GFa-Y6-1qD" secondAttribute="bottom" constant="8" id="DZy-U9-ZGP"/>
                             <constraint firstItem="wBB-tl-yAf" firstAttribute="top" secondItem="aOz-QJ-VNo" secondAttribute="top" id="Eur-j0-bPo"/>
+                            <constraint firstItem="Ond-09-ev7" firstAttribute="centerX" secondItem="aOz-QJ-VNo" secondAttribute="centerX" id="GJB-OB-tJt"/>
                             <constraint firstItem="GFa-Y6-1qD" firstAttribute="leading" secondItem="aOz-QJ-VNo" secondAttribute="leadingMargin" id="H6B-vQ-aNZ"/>
-                            <constraint firstItem="Ond-09-ev7" firstAttribute="top" secondItem="cI0-1P-H1W" secondAttribute="bottom" constant="12" id="Hy4-pQ-IYA"/>
+                            <constraint firstItem="eIl-ia-dk5" firstAttribute="top" secondItem="Ond-09-ev7" secondAttribute="bottom" constant="-3" id="HkE-gK-U43"/>
                             <constraint firstItem="GFa-Y6-1qD" firstAttribute="top" secondItem="L2e-7x-t8p" secondAttribute="bottom" constant="22.5" id="KX3-TU-cdw"/>
                             <constraint firstItem="EjF-W1-QWX" firstAttribute="leading" secondItem="cI0-1P-H1W" secondAttribute="trailing" id="MxR-sc-pdZ"/>
+                            <constraint firstItem="eIl-ia-dk5" firstAttribute="leading" secondItem="aOz-QJ-VNo" secondAttribute="leadingMargin" id="N53-V0-xn2"/>
                             <constraint firstItem="FSt-PH-rBu" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="NAz-lX-h4X"/>
                             <constraint firstItem="sqm-si-muf" firstAttribute="leading" secondItem="EjF-W1-QWX" secondAttribute="trailing" constant="-1" id="O6K-d6-8yx"/>
                             <constraint firstItem="GFa-Y6-1qD" firstAttribute="centerX" secondItem="aOz-QJ-VNo" secondAttribute="centerX" id="P7C-Rc-9KW"/>
                             <constraint firstItem="88n-wp-SHn" firstAttribute="trailing" secondItem="aOz-QJ-VNo" secondAttribute="trailingMargin" id="QBf-HM-swX"/>
                             <constraint firstItem="v4y-pT-Jo1" firstAttribute="leading" secondItem="FSt-PH-rBu" secondAttribute="trailing" id="SQs-Wg-OKx"/>
+                            <constraint firstItem="Ond-09-ev7" firstAttribute="top" secondItem="cI0-1P-H1W" secondAttribute="bottom" constant="8" id="TCF-Cy-jLw"/>
                             <constraint firstItem="PHa-Ee-tkJ" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="XWa-OZ-7lP"/>
                             <constraint firstItem="cI0-1P-H1W" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="ZQO-hf-fif"/>
+                            <constraint firstItem="eIl-ia-dk5" firstAttribute="trailing" secondItem="aOz-QJ-VNo" secondAttribute="trailingMargin" id="ZqL-am-8kN"/>
                             <constraint firstItem="PHa-Ee-tkJ" firstAttribute="leading" secondItem="Kgk-6u-bXz" secondAttribute="trailing" constant="-2" id="aIr-NP-9am"/>
                             <constraint firstAttribute="trailing" secondItem="wBB-tl-yAf" secondAttribute="trailing" id="cF1-fw-1m5"/>
                             <constraint firstItem="v4y-pT-Jo1" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="cYA-gR-FlR"/>
-                            <constraint firstItem="88n-wp-SHn" firstAttribute="top" secondItem="GFa-Y6-1qD" secondAttribute="bottom" constant="22" id="gRI-4j-tYh"/>
                             <constraint firstItem="Kgk-6u-bXz" firstAttribute="top" secondItem="88n-wp-SHn" secondAttribute="bottom" constant="8" id="ggE-Kd-f1C"/>
                             <constraint firstItem="88n-wp-SHn" firstAttribute="leading" secondItem="aOz-QJ-VNo" secondAttribute="leadingMargin" id="iGd-gq-NiD"/>
                             <constraint firstItem="Kgk-6u-bXz" firstAttribute="leading" secondItem="sqm-si-muf" secondAttribute="trailing" constant="-2" id="tJV-Tj-wgo"/>
@@ -211,10 +241,17 @@
                             <constraint firstItem="wBB-tl-yAf" firstAttribute="leading" secondItem="aOz-QJ-VNo" secondAttribute="leading" id="xO5-V1-e3F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="sqm-si-muf" id="Glm-X5-Od7"/>
+                        <outlet property="monthTextField" destination="cI0-1P-H1W" id="Uvh-he-uef"/>
+                        <outlet property="taskNumberTextField" destination="FSt-PH-rBu" id="wLj-iY-3RN"/>
+                        <outlet property="textSavedInfo" destination="eIl-ia-dk5" id="stA-42-QgQ"/>
+                        <outlet property="yearTextField" destination="PHa-Ee-tkJ" id="VrG-2O-fo7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2z-qR-SwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1965" y="35.91549295774648"/>
+            <point key="canvasLocation" x="2331" y="35"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="ZlA-nt-Pfo">
@@ -225,31 +262,34 @@
                         <viewControllerLayoutGuide type="bottom" id="bKU-rI-4I9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G7z-Ah-Aps">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Natalie Alvarez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNv-EM-0DZ">
-                                <rect key="frame" x="104" y="389.5" width="167.5" height="26"/>
+                                <rect key="frame" x="77" y="340" width="167.5" height="26"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gr-dX-gRE">
-                                <rect key="frame" x="163.5" y="427.5" width="48" height="36"/>
+                                <rect key="frame" x="136" y="378" width="48" height="36"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
                                 <state key="normal" title="Begin">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GID-IA-m7S" kind="show" id="dcz-2t-9qf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General_Electric_logo.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-Eb-fud">
-                                <rect key="frame" x="114.5" y="183" width="146" height="145.5"/>
+                                <rect key="frame" x="87" y="133.5" width="146" height="145.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="452-wQ-Rp9"/>
                                     <constraint firstAttribute="height" constant="145" id="g3I-nC-M9B"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPex Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t75-eP-Cf0">
-                                <rect key="frame" x="92.5" y="341.5" width="190.5" height="44.5"/>
+                                <rect key="frame" x="65" y="292" width="190.5" height="44.5"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -258,6 +298,7 @@
                         <color key="backgroundColor" red="0.0" green="0.65464650849999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gNv-EM-0DZ" firstAttribute="top" secondItem="t75-eP-Cf0" secondAttribute="bottom" constant="3.5" id="6ay-hd-bLq"/>
+                            <constraint firstItem="5gr-dX-gRE" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="BGC-QF-ujE"/>
                             <constraint firstItem="5gr-dX-gRE" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="Gbg-V6-UKh"/>
                             <constraint firstItem="gNv-EM-0DZ" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="PMY-FV-Vvi"/>
                             <constraint firstItem="EEl-Eb-fud" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="QNZ-Nc-RhU"/>
@@ -276,4 +317,7 @@
     <resources>
         <image name="General_Electric_logo.svg.png" width="1024" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1RP-UO-QYB"/>
+    </inferredMetricsTieBreakers>
 </document>

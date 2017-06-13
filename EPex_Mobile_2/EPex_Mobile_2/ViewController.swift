@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var table: UITableView!
 
-    let cellContent = ["Natalie", "Anthony", "David"]
+    let cellContent:[String] = ["Natalie", "Anthony", "David"]
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -21,12 +21,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Project_Cell")
-       
+       // let cell = tableView.dequeueReusableCell(withIdentifier: "Project_Cell", for: indexPath) as! ProjectsTableViewCell
         
-       //  cell.textLabel?.font = [ UIFont .fontNames(forFamilyName: "GE Inspira Regular" ) ]
+        //cell.projectsNameLabel?.text = cellContent[indexPath.row]
         
-            //[UIFont fontWithName:@"GEInspiraRegular" size:12.0f]
-        
+        //UITableViewCell(style: ProjectsTableViewCell, reuseIdentifier: "Project_Cell")
+    
        
         cell.textLabel?.text = cellContent[indexPath.row]
         
@@ -36,13 +36,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        table.reloadData()
     }
     
      override func viewDidAppear(_ animated: Bool) {
         
         table.reloadData()
     }
-
+  
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+       
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        
+        let row = indexPath.row
+         print(row)
+        
+        if row >= 0 {
+            [self.performSegue(withIdentifier: "mySegue", sender: self)]
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
