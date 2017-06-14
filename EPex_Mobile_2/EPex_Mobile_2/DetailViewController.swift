@@ -8,20 +8,51 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet var table2: UITableView!
     @IBOutlet var taskNumberTextField: UITextField!
     @IBOutlet var monthTextField: UITextField!
     @IBOutlet var dateTextField: UITextField!
     @IBOutlet var yearTextField: UITextField!
-    @IBOutlet var textSavedInfo: UILabel!
+ 
     @IBAction func buttonSave(_ sender: Any) {
-        let MM = monthTextField.text
-        let DD = dateTextField.text
-        let YY = yearTextField.text
-        let TN = taskNumberTextField.text
-        textSavedInfo.text = "Task " + TN! + ": " + MM! + "/" + DD! + "/" + YY! + " was saved"
+        var invalidDate = false
+        var invalidTask = false
+        
+        //get today's date:
+        let date = Date()
+        
+        
+        //check if date and task were entered:
+        if let MMString = monthTextField.text {
+            let MM = Int(MMString)
+            
+            //check if month is valid:
+            if MM! < 1 || MM! > 12 {
+                invalidDate = true
+            }
+            
+        } else { invalidDate = true }
+        if let DDString = dateTextField.text {
+            let DD = Int(DDString)
+        } else { invalidDate = true }
+        
+        if let YYString = yearTextField.text {
+            let YY = Int(YYString)
+        } else { invalidDate = true }
+        if let TNString = taskNumberTextField.text {
+            let TN = Int(TNString)
+        } else { invalidTask = true }
+        
+        
+        
+        
+        //clear text after saving!
+        monthTextField.text = ""
+        dateTextField.text = ""
+        yearTextField.text = ""
+        taskNumberTextField.text = ""
     
     }
     
@@ -55,22 +86,18 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table2.reloadData()
     }
 
+    //keyboard touch:
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //is run whenever the user touches the main area of the app (aka anything outside of the keyboard!)
+        
+        //closes keyboard when tapping outside of keyboard:
+        self.view.endEditing(true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
- 
 }
+
+//**Don't forget to CTRL-drag from text field to View Controller (in Main Storyboard) and select "delegate"!!!
