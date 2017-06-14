@@ -14,6 +14,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBOutlet var table2: UITableView!
+    @IBOutlet var datePicker: UIDatePicker!
     
     @IBAction func buttonSave(_ sender: Any) {
         
@@ -44,7 +45,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+       //set max date on date picker today!:
+        datePicker.maximumDate = Date()
         table2.reloadData()
     }
 

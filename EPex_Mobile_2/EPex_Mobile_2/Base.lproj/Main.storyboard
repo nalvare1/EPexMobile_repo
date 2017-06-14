@@ -474,6 +474,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="519144907.57028198">
                                     <!--2017-06-14 14:55:07 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3439713600">
+                                    <!--1892-01-01 12:00:00 +0000-->
+                                </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete A Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEa-eT-3kR">
                                 <rect key="frame" x="16" y="474" width="343" height="27"/>
@@ -511,6 +514,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="5bV-An-y1u" id="6cB-DN-Dl8"/>
                         <outlet property="table2" destination="JXk-ms-5NE" id="QyB-JM-ScL"/>
                         <segue destination="ar9-Im-e6G" kind="unwind" identifier="segueToSavedProjectsVC" unwindAction="unwindToSavedProjectsVCWithSegue:" id="ziO-JC-b1U"/>
                     </connections>
