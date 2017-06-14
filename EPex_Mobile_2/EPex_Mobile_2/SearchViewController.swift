@@ -9,10 +9,14 @@
 import UIKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
+    
 
     @IBOutlet var ownerNameLabel: UITextField!
     @IBOutlet var projectIDLabel: UITextField!
    
+    @IBAction func buttonHome2(_ sender: Any) {
+         [self.performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)]
+    }
     @IBAction func buttonSearch(_ sender: Any) {
             //perform search:
        // let ownerName = ownerNameLabel.text
@@ -24,9 +28,15 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         projectIDLabel.text = ""
     //    productLineLabel.text = ""
         
-        [self.performSegue(withIdentifier: "mySearchSegue", sender: self)]
+     //   [self.performSegue(withIdentifier: "mySearchSegue", sender: self)]
 
+         performSegue(withIdentifier: "mySearchSegue", sender: self)
+       
+   //     [self presentViewController:myViewController animated:YES completion:nil];
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,12 +48,19 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-       //keyboard(hit "Return"):
+    //keyboard (touch outside of keyboard):
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //keyboard(hit "Return"):
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
         
         return true
     }
+    
+     @IBAction func unwindToSearchVC(segue: UIStoryboardSegue) {}
 
 }

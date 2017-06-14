@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    @IBAction func buttonBackToProjects(_ sender: Any) {
+        [self.performSegue(withIdentifier: "segueToSavedProjectsVC", sender: self)]
+    }
 
     @IBOutlet var table2: UITableView!
     @IBOutlet var taskNumberTextField: UITextField!

@@ -34,4 +34,5 @@ class SplashScreenViewController: UIViewController {
     }
     */
 
+    @IBAction func unwindToSplashScreenVC(segue: UIStoryboardSegue) {}
 }

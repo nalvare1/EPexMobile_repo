@@ -10,6 +10,9 @@ import UIKit
 
 class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITextFieldDelegate {
     
+    @IBAction func buttonSearchAgain(_ sender: Any) {
+        [self.performSegue(withIdentifier: "segueToSearchVC", sender: self)]
+    }
     @IBOutlet var table3: UITableView!
    
     

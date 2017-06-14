@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var table: UITableView!
 
+    @IBAction func buttonHome(_ sender: Any) {
+           [self.performSegue(withIdentifier: "segueToSplashScreenVCFromSavedProjectsVC", sender: self)]
+    }
     let cellContent:[String] = ["Natalie", "Anthony", "David"]
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +66,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func unwindToSavedProjectsVC(segue: UIStoryboardSegue) {}
 
 }
 
