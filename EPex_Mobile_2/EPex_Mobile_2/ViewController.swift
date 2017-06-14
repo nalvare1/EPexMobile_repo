@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var table: UITableView!
 
     @IBAction func buttonHome(_ sender: Any) {
-           [self.performSegue(withIdentifier: "segueToSplashScreenVCFromSavedProjectsVC", sender: self)]
+           performSegue(withIdentifier: "segueToSplashScreenVCFromSavedProjectsVC", sender: self)
     }
     let cellContent:[String] = ["Natalie", "Anthony", "David"]
     
@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
          print(row)
         
         if row >= 0 {
-            [self.performSegue(withIdentifier: "mySegue", sender: self)]
+            performSegue(withIdentifier: "mySegue", sender: self)
         }
     }
     
@@ -68,6 +68,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func unwindToSavedProjectsVC(segue: UIStoryboardSegue) {}
-
 }
 

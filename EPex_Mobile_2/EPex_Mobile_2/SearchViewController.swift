@@ -15,7 +15,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var projectIDLabel: UITextField!
    
     @IBAction func buttonHome2(_ sender: Any) {
-         [self.performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)]
+         performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)
     }
     @IBAction func buttonSearch(_ sender: Any) {
             //perform search:

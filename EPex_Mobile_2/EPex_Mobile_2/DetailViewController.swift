@@ -10,55 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBAction func buttonBackToProjects(_ sender: Any) {
-        [self.performSegue(withIdentifier: "segueToSavedProjectsVC", sender: self)]
+        performSegue(withIdentifier: "segueToSavedProjectsVC", sender: self)
     }
-
+    
     @IBOutlet var table2: UITableView!
-    @IBOutlet var taskNumberTextField: UITextField!
-    @IBOutlet var monthTextField: UITextField!
-    @IBOutlet var dateTextField: UITextField!
-    @IBOutlet var yearTextField: UITextField!
- 
+    
     @IBAction func buttonSave(_ sender: Any) {
-        var invalidDate = false
-        var invalidTask = false
         
-        //get today's date:
-        let date = Date()
-        
-        
-        //check if date and task were entered:
-        if let MMString = monthTextField.text {
-            let MM = Int(MMString)
-            
-            //check if month is valid:
-            if MM! < 1 || MM! > 12 {
-                invalidDate = true
-            }
-            
-        } else { invalidDate = true }
-        if let DDString = dateTextField.text {
-            let DD = Int(DDString)
-        } else { invalidDate = true }
-        
-        if let YYString = yearTextField.text {
-            let YY = Int(YYString)
-        } else { invalidDate = true }
-        if let TNString = taskNumberTextField.text {
-            let TN = Int(TNString)
-        } else { invalidTask = true }
-        
-        
-        
-        
-        //clear text after saving!
-        monthTextField.text = ""
-        dateTextField.text = ""
-        yearTextField.text = ""
-        taskNumberTextField.text = ""
-    
     }
-    
     let cellContent2 = ["Natalie", "Anthony", "David"]
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -11,7 +11,7 @@ import UIKit
 class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITextFieldDelegate {
     
     @IBAction func buttonSearchAgain(_ sender: Any) {
-        [self.performSegue(withIdentifier: "segueToSearchVC", sender: self)]
+        performSegue(withIdentifier: "segueToSearchVC", sender: self)
     }
     @IBOutlet var table3: UITableView!
    
@@ -23,7 +23,7 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITex
         return cellContent3.count
     }
     
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    @nonobjc internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell3 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Search_Results_Cell")
         
