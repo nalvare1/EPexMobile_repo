@@ -16,11 +16,11 @@
 		1899D5821EF172DA0069C52D /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899D5811EF172DA0069C52D /* SearchResultsViewController.swift */; };
 		18A057841EF04A7900E0724A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A057831EF04A7900E0724A /* AppDelegate.swift */; };
 		18A057861EF04A7900E0724A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A057851EF04A7900E0724A /* ViewController.swift */; };
-		18A057891EF04A7900E0724A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A057871EF04A7900E0724A /* Main.storyboard */; };
 		18A0578B1EF04A7900E0724A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A0578A1EF04A7900E0724A /* Assets.xcassets */; };
 		18A0578E1EF04A7900E0724A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */; };
 		18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579A1EF04E7100E0724A /* DetailViewController.swift */; };
 		18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */; };
+		18CB881A1EF1ACC400F6BD7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CB88181EF1ACC400F6BD7C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +34,12 @@
 		18A057801EF04A7900E0724A /* EPex_Mobile_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPex_Mobile_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A057831EF04A7900E0724A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A057851EF04A7900E0724A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18A057881EF04A7900E0724A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18A0578A1EF04A7900E0724A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A0578D1EF04A7900E0724A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A0578F1EF04A7900E0724A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A0579A1EF04E7100E0724A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		18CB88191EF1ACC400F6BD7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,10 @@
 				18A057851EF04A7900E0724A /* ViewController.swift */,
 				18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */,
 				18A0579A1EF04E7100E0724A /* DetailViewController.swift */,
-				18A057871EF04A7900E0724A /* Main.storyboard */,
 				1899D5811EF172DA0069C52D /* SearchResultsViewController.swift */,
 				1899D57F1EF16EF50069C52D /* SearchViewController.swift */,
 				18A0578A1EF04A7900E0724A /* Assets.xcassets */,
+				18CB88181EF1ACC400F6BD7C /* Main.storyboard */,
 				18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */,
 				18A0578F1EF04A7900E0724A /* Info.plist */,
 			);
@@ -154,10 +154,10 @@
 				1899D5771EF1630D0069C52D /* EPex_Logo.png in Resources */,
 				18A0578E1EF04A7900E0724A /* LaunchScreen.storyboard in Resources */,
 				1899D5781EF1630D0069C52D /* GE Inspira Regular.exe in Resources */,
+				18CB881A1EF1ACC400F6BD7C /* Main.storyboard in Resources */,
 				18A0578B1EF04A7900E0724A /* Assets.xcassets in Resources */,
 				1899D57A1EF1630D0069C52D /* General_Electric_logo.svg.png in Resources */,
 				1899D5791EF1630D0069C52D /* GE Inspira Regular.ttf in Resources */,
-				18A057891EF04A7900E0724A /* Main.storyboard in Resources */,
 				1899D57E1EF168FC0069C52D /* EPex_AppIcon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,20 +181,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18A057871EF04A7900E0724A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18A057881EF04A7900E0724A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				18A0578D1EF04A7900E0724A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18CB88181EF1ACC400F6BD7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18CB88191EF1ACC400F6BD7C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

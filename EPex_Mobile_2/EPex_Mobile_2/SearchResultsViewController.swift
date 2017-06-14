@@ -8,11 +8,17 @@
 
 import UIKit
 
-class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITextFieldDelegate {
+class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func buttonSearchAgain(_ sender: Any) {
         performSegue(withIdentifier: "segueToSearchVC", sender: self)
     }
+    @IBAction func buttonSave(_ sender: Any) {
+    
+
+       //delete row (prob from array) after saving
+    }
+    
     @IBOutlet var table3: UITableView!
    
     
@@ -22,8 +28,9 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITex
     
         return cellContent3.count
     }
+ 
     
-    @nonobjc internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell3 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Search_Results_Cell")
         
@@ -34,7 +41,6 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITex
         return cell3
     }
  
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
