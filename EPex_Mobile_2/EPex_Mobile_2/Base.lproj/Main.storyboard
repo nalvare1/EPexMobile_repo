@@ -27,18 +27,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-vK-lUJ" customClass="ProjectsTableViewCell">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-vK-lUJ" customClass="ProjectsTableViewCell">
                                 <rect key="frame" x="0.0" y="99" width="320" height="389"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexColor" red="0.050723220909999998" green="0.0064513355309999999" blue="0.15221941310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell" id="O2j-ti-pcb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell" focusStyle="custom" id="O2j-ti-pcb">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O2j-ti-pcb" id="uAW-Nl-FSH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -113,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHa-Ee-tkJ">
-                                <rect key="frame" x="253" y="410" width="39" height="30"/>
+                                <rect key="frame" x="252.5" y="410" width="38.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -122,7 +122,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-si-muf">
-                                <rect key="frame" x="191" y="410" width="43" height="30"/>
+                                <rect key="frame" x="190.5" y="410" width="43" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1E5-d5-ouR"/>
                                 </constraints>
@@ -134,7 +134,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-1P-H1W">
-                                <rect key="frame" x="122" y="410" width="47" height="30"/>
+                                <rect key="frame" x="121.5" y="410" width="47" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -143,7 +143,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjF-W1-QWX">
-                                <rect key="frame" x="169" y="410" width="23" height="30"/>
+                                <rect key="frame" x="168.5" y="410" width="23" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="A8u-Jb-7ic"/>
                                     <constraint firstAttribute="width" constant="23" id="k2b-Qr-b4n"/>
@@ -153,7 +153,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4y-pT-Jo1">
-                                <rect key="frame" x="85" y="410" width="23" height="30"/>
+                                <rect key="frame" x="84.5" y="410" width="23" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="23" id="8hw-wD-Lj3"/>
                                     <constraint firstAttribute="height" constant="30" id="RbD-j7-aAx"/>
@@ -163,7 +163,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSt-PH-rBu">
-                                <rect key="frame" x="17" y="410" width="68" height="30"/>
+                                <rect key="frame" x="17" y="410" width="67.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -189,7 +189,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uz-4Y-44L" id="uoY-8v-E4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -212,7 +212,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgk-6u-bXz">
-                                <rect key="frame" x="232" y="410" width="23" height="30"/>
+                                <rect key="frame" x="231.5" y="410" width="23" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZjD-7N-kuy"/>
                                     <constraint firstAttribute="width" constant="23" id="nV0-2e-JNR"/>
@@ -286,26 +286,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Natalie Alvarez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNv-EM-0DZ">
-                                <rect key="frame" x="76" y="300" width="168" height="26"/>
+                                <rect key="frame" x="76.5" y="299.5" width="167.5" height="26"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General_Electric_logo.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-Eb-fud">
-                                <rect key="frame" x="87" y="63" width="146" height="145"/>
+                                <rect key="frame" x="87" y="62.5" width="146" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="452-wQ-Rp9"/>
                                     <constraint firstAttribute="height" constant="145" id="g3I-nC-M9B"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPex Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t75-eP-Cf0">
-                                <rect key="frame" x="65" y="252" width="191" height="45"/>
+                                <rect key="frame" x="65" y="251.5" width="190.5" height="45"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-2w-ubU">
-                                <rect key="frame" x="79" y="417" width="162" height="36"/>
+                                <rect key="frame" x="79" y="416.5" width="162" height="36"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
                                 <state key="normal" title="Search For Projects">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -315,7 +315,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gr-dX-gRE">
-                                <rect key="frame" x="98" y="373" width="124" height="36"/>
+                                <rect key="frame" x="98" y="372.5" width="124" height="36"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
                                 <state key="normal" title="Saved Projects">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -384,7 +384,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-8z-ZEH">
-                                <rect key="frame" x="16" y="228" width="288" height="30"/>
+                                <rect key="frame" x="16" y="213" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -393,16 +393,16 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type in owner name, Project ID, and Product Line and hit &quot;Search&quot;:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-Ij-bl1">
-                                <rect key="frame" x="16" y="92" width="288" height="31"/>
+                                <rect key="frame" x="16" y="92" width="288" height="15.5"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-fu-tIj">
-                                <rect key="frame" x="16" y="306" width="288" height="216"/>
+                                <rect key="frame" x="16" y="305.5" width="288" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Line:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzQ-AI-D1u">
-                                <rect key="frame" x="16" y="271" width="288" height="27"/>
+                                <rect key="frame" x="16" y="270.5" width="288" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="FGv-vZ-csY"/>
                                 </constraints>
@@ -479,7 +479,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Xi-q3-N2a" customClass="ProjectsTableViewCell">
-                                <rect key="frame" x="0.0" y="99" width="320" height="389"/>
+                                <rect key="frame" x="0.0" y="142" width="320" height="382"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.050723220909999998" green="0.0064513355309999999" blue="0.15221941310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,8 +489,38 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AAI-V0-05a" id="jZs-In-DEP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVH-iC-5HU">
+                                                    <rect key="frame" x="8" y="0.0" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJC-Ia-F4r">
+                                                    <rect key="frame" x="8" y="22" width="51" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actual Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khi-Xo-BZM">
+                                                    <rect key="frame" x="216" y="22" width="89" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Commit Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ic-Gb-8nM">
+                                                    <rect key="frame" x="211" y="0.0" width="101" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -515,20 +545,58 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhX-Q2-6dP">
+                                <rect key="frame" x="16" y="78" width="288" height="47"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="AaI-Xt-zsG"/>
+                                    <constraint firstAttribute="height" constant="47" id="Hpm-yK-9HM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Owner                                          Actual Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWY-cz-QlF">
+                                <rect key="frame" x="16" y="105" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="260-ES-Ut2"/>
+                                    <constraint firstAttribute="height" constant="21" id="FsF-bM-uL4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Title                                            Commit Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z02-DA-d6U">
+                                <rect key="frame" x="16" y="78" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QiE-Y9-myY"/>
+                                    <constraint firstAttribute="width" constant="288" id="ZXG-zc-gjX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zWY-cz-QlF" firstAttribute="top" secondItem="z02-DA-d6U" secondAttribute="bottom" constant="6" id="7SE-3b-tK4"/>
                             <constraint firstItem="iT2-Ak-nqz" firstAttribute="leading" secondItem="6Aq-R8-ZYe" secondAttribute="leadingMargin" id="8bX-Eb-Iw2"/>
                             <constraint firstItem="7Xi-q3-N2a" firstAttribute="leading" secondItem="6Aq-R8-ZYe" secondAttribute="leading" id="B3h-n0-Kqv"/>
                             <constraint firstAttribute="trailing" secondItem="7Xi-q3-N2a" secondAttribute="trailing" id="BOp-6m-tJI"/>
-                            <constraint firstItem="XMq-9I-2jO" firstAttribute="top" secondItem="7Xi-q3-N2a" secondAttribute="bottom" constant="80" id="IVX-qD-tTJ"/>
                             <constraint firstItem="iT2-Ak-nqz" firstAttribute="centerX" secondItem="6Aq-R8-ZYe" secondAttribute="centerX" id="Jzr-n0-Bf9"/>
+                            <constraint firstItem="Eb2-YY-DzS" firstAttribute="top" secondItem="7Xi-q3-N2a" secondAttribute="bottom" id="KMI-Ys-db7"/>
                             <constraint firstItem="Eb2-YY-DzS" firstAttribute="leading" secondItem="6Aq-R8-ZYe" secondAttribute="leading" id="KYb-DT-IFD"/>
-                            <constraint firstItem="7Xi-q3-N2a" firstAttribute="top" secondItem="iT2-Ak-nqz" secondAttribute="bottom" constant="30" id="LAL-TK-yT7"/>
                             <constraint firstItem="XMq-9I-2jO" firstAttribute="top" secondItem="Eb2-YY-DzS" secondAttribute="bottom" id="Q0B-Br-Ptj"/>
+                            <constraint firstItem="mhX-Q2-6dP" firstAttribute="centerX" secondItem="6Aq-R8-ZYe" secondAttribute="centerX" id="Uql-Is-sbd"/>
+                            <constraint firstItem="7Xi-q3-N2a" firstAttribute="top" secondItem="mhX-Q2-6dP" secondAttribute="bottom" constant="17" id="agL-xF-Nkf"/>
+                            <constraint firstItem="z02-DA-d6U" firstAttribute="top" secondItem="iT2-Ak-nqz" secondAttribute="bottom" constant="9" id="cB8-O6-Dze"/>
+                            <constraint firstItem="mhX-Q2-6dP" firstAttribute="top" secondItem="iT2-Ak-nqz" secondAttribute="bottom" constant="9" id="dfd-Mq-LfQ"/>
+                            <constraint firstItem="z02-DA-d6U" firstAttribute="centerX" secondItem="6Aq-R8-ZYe" secondAttribute="centerX" id="fSM-wK-SfI"/>
+                            <constraint firstItem="mhX-Q2-6dP" firstAttribute="centerX" secondItem="6Aq-R8-ZYe" secondAttribute="centerX" id="sOK-sg-ggn"/>
                             <constraint firstAttribute="trailing" secondItem="Eb2-YY-DzS" secondAttribute="trailing" id="xFO-4N-x5i"/>
                             <constraint firstItem="iT2-Ak-nqz" firstAttribute="top" secondItem="Ubb-8C-eb3" secondAttribute="bottom" constant="14" id="xM2-ga-bsx"/>
                             <constraint firstItem="iT2-Ak-nqz" firstAttribute="trailing" secondItem="6Aq-R8-ZYe" secondAttribute="trailingMargin" id="yeA-2t-TFB"/>
+                            <constraint firstItem="zWY-cz-QlF" firstAttribute="centerX" secondItem="6Aq-R8-ZYe" secondAttribute="centerX" id="zsF-9o-s3F"/>
                         </constraints>
                     </view>
                     <connections>
@@ -537,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ocr-sZ-yCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2404" y="794"/>
+            <point key="canvasLocation" x="2403.75" y="793.30985915492954"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8Wv-6F-vmH">
@@ -554,12 +622,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JXk-ms-5NE">
                                 <rect key="frame" x="0.0" y="104" width="320" height="254"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell2" id="tDr-Gg-6OW">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tDr-Gg-6OW" id="9j4-km-pAq">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -641,8 +710,8 @@
         <image name="General_Electric_logo.svg.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zVi-Qt-tjs"/>
-        <segue reference="vEo-KA-kLO"/>
+        <segue reference="W2B-gH-xl1"/>
         <segue reference="991-ed-cAz"/>
+        <segue reference="vEo-KA-kLO"/>
     </inferredMetricsTieBreakers>
 </document>
