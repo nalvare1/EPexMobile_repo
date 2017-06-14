@@ -11,6 +11,7 @@
 		1899D5781EF1630D0069C52D /* GE Inspira Regular.exe in Resources */ = {isa = PBXBuildFile; fileRef = 1899D5741EF1630D0069C52D /* GE Inspira Regular.exe */; };
 		1899D5791EF1630D0069C52D /* GE Inspira Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1899D5751EF1630D0069C52D /* GE Inspira Regular.ttf */; };
 		1899D57A1EF1630D0069C52D /* General_Electric_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1899D5761EF1630D0069C52D /* General_Electric_logo.svg.png */; };
+		1899D57E1EF168FC0069C52D /* EPex_AppIcon in Resources */ = {isa = PBXBuildFile; fileRef = 1899D57D1EF168FC0069C52D /* EPex_AppIcon */; };
 		18A057841EF04A7900E0724A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A057831EF04A7900E0724A /* AppDelegate.swift */; };
 		18A057861EF04A7900E0724A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A057851EF04A7900E0724A /* ViewController.swift */; };
 		18A057891EF04A7900E0724A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A057871EF04A7900E0724A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		1899D5741EF1630D0069C52D /* GE Inspira Regular.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE Inspira Regular.exe"; sourceTree = "<group>"; };
 		1899D5751EF1630D0069C52D /* GE Inspira Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE Inspira Regular.ttf"; sourceTree = "<group>"; };
 		1899D5761EF1630D0069C52D /* General_Electric_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General_Electric_logo.svg.png; sourceTree = "<group>"; };
+		1899D57D1EF168FC0069C52D /* EPex_AppIcon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EPex_AppIcon; sourceTree = "<group>"; };
 		18A057801EF04A7900E0724A /* EPex_Mobile_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPex_Mobile_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A057831EF04A7900E0724A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A057851EF04A7900E0724A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1899D5741EF1630D0069C52D /* GE Inspira Regular.exe */,
 				1899D5751EF1630D0069C52D /* GE Inspira Regular.ttf */,
 				1899D5761EF1630D0069C52D /* General_Electric_logo.svg.png */,
+				1899D57D1EF168FC0069C52D /* EPex_AppIcon */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +155,7 @@
 				1899D57A1EF1630D0069C52D /* General_Electric_logo.svg.png in Resources */,
 				1899D5791EF1630D0069C52D /* GE Inspira Regular.ttf in Resources */,
 				18A057891EF04A7900E0724A /* Main.storyboard in Resources */,
+				1899D57E1EF168FC0069C52D /* EPex_AppIcon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
