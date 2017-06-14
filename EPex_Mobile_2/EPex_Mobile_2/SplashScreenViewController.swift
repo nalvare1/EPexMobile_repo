@@ -10,12 +10,12 @@ import UIKit
 
 class SplashScreenViewController: UIViewController {
 
+    @IBOutlet var EPexLabel: UILabel!
     var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,51 +1,43 @@
 {
   "images" : [
     {
+      "idiom" : "iphone",
       "size" : "20x20",
-      "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM.png",
       "scale" : "2x"
     },
     {
+      "idiom" : "iphone",
       "size" : "20x20",
-      "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-1.png",
       "scale" : "3x"
     },
     {
+      "idiom" : "iphone",
       "size" : "29x29",
-      "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-2.png",
       "scale" : "2x"
     },
     {
+      "idiom" : "iphone",
       "size" : "29x29",
-      "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-3.png",
       "scale" : "3x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-4.png",
+      "size" : "40x40",
       "scale" : "2x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-5.png",
+      "size" : "40x40",
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-6.png",
+      "size" : "60x60",
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Screen Shot 2017-06-13 at 2.34.54 PM-7.png",
+      "size" : "60x60",
       "scale" : "3x"
     }
   ],

@@ -27,7 +27,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //UITableViewCell(style: ProjectsTableViewCell, reuseIdentifier: "Project_Cell")
     
-       
+       cell.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
+        
         cell.textLabel?.text = cellContent[indexPath.row]
         
         return cell

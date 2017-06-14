@@ -8,8 +8,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var table2: UITableView!
     @IBOutlet var taskNumberTextField: UITextField!
     @IBOutlet var monthTextField: UITextField!
     @IBOutlet var dateTextField: UITextField!
@@ -24,13 +25,36 @@ class DetailViewController: UIViewController {
     
     }
     
+    let cellContent2 = ["Natalie", "Anthony", "David"]
+    
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return cellContent2.count
+    }
+    
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell2 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Project_Cell2")
+        
+         cell2.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
+        
+        cell2.textLabel?.text = cellContent2[indexPath.row]
+        
+        return cell2
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
-        // UIDatePicker  *dp = [[UIDatePicker alloc]initWithFrame:CGRectZero];
-        // userDateField.inputView = dp;
-        
+        table2.reloadData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        table2.reloadData()
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
