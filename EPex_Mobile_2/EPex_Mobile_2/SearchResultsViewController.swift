@@ -9,25 +9,38 @@
 import UIKit
 
 class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var selectedRow = 0
     
+    var projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
+    var projectOwners:[String] = ["Natalie", "Anthony", "David"]
+    var commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
+    var actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
+
+    
+    @IBOutlet var table3: UITableView!
     @IBAction func buttonSearchAgain(_ sender: Any) {
         performSegue(withIdentifier: "segueToSearchVC", sender: self)
     }
-    @IBAction func buttonSave(_ sender: Any) {
-    
 
-       //delete row (prob from array) after saving
+    
+    @IBAction func buttonSave(_ sender: Any) {
+        //!!SAVE THIS INFO SOMEHOW INTO SAVED PROJECTS BEFORE DELETION!!!
+        
+        
+        //delete row (prob from arrays) after saving:
+        projectNames.remove(at: selectedRow)
+        projectOwners.remove(at: selectedRow)
+        commitDates.remove(at: selectedRow)
+        actualDates.remove(at: selectedRow)
+        
+        //update table:
+        table3.reloadData()
+        
     }
     
-    @IBOutlet var table3: UITableView!
-   
     
     //let cellContent3:[String] = ["Natalie", "Anthony", "David"]
     
-    let projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
-    let projectOwners:[String] = ["Natalie", "Anthony", "David"]
-    let commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
-    let actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
@@ -64,12 +77,17 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    
+        
         table3.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         table3.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //set global var to indexPath.row value:
+        selectedRow = indexPath.row
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

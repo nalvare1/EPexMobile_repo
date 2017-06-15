@@ -9,17 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet var table: UITableView!
 
     @IBAction func buttonHome(_ sender: Any) {
            performSegue(withIdentifier: "segueToSplashScreenVCFromSavedProjectsVC", sender: self)
     }
+    
+    var selectedRow = 0
   //  let cellContent:[String] = ["Natalie", "Anthony", "David"]
     
     let projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
     let projectOwners:[String] = ["Natalie", "Anthony", "David"]
     let commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
     let actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
+   
     
 
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,9 +54,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -61,21 +62,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
      override func viewDidAppear(_ animated: Bool) {
-        
         table.reloadData()
     }
   
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //set global var:
+        selectedRow = indexPath.row
+        
+        UserDefaults.standard.set(projectNames[selectedRow], forKey: "projectName")
        
-        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+     //   tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         
-        let row = indexPath.row
-         print(row)
-        
-        if row >= 0 {
-            performSegue(withIdentifier: "mySegue", sender: self)
-        }
+        //go to DetailVC:
+        performSegue(withIdentifier: "mySegue", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

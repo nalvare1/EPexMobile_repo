@@ -395,7 +395,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make An App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCq-WJ-6hk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCq-WJ-6hk">
                                 <rect key="frame" x="16" y="34" width="343" height="38"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -447,6 +447,7 @@
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="5bV-An-y1u" id="6cB-DN-Dl8"/>
+                        <outlet property="projectNameLabel" destination="mCq-WJ-6hk" id="gdT-mS-VQO"/>
                         <outlet property="table2" destination="JXk-ms-5NE" id="QyB-JM-ScL"/>
                         <segue destination="ar9-Im-e6G" kind="unwind" identifier="segueToSavedProjectsVC" unwindAction="unwindToSavedProjectsVCWithSegue:" id="ziO-JC-b1U"/>
                     </connections>
@@ -546,13 +547,13 @@
                                 <items>
                                     <barButtonItem title="Search Again" id="D5d-Pp-69X">
                                         <connections>
-                                            <action selector="buttonSearchAgain:" destination="jle-uQ-Efk" id="iX3-fv-wJ1"/>
+                                            <action selector="buttonSearchAgain:" destination="jle-uQ-Efk" id="avA-Mn-Ktn"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9gp-pD-mqT"/>
                                     <barButtonItem title="Save" id="jl6-lX-ZYe">
                                         <connections>
-                                            <action selector="buttonSave:" destination="jle-uQ-Efk" id="tKu-xf-ZIk"/>
+                                            <action selector="buttonSave:" destination="jle-uQ-Efk" id="64S-0M-iCj"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -612,7 +613,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="table3" destination="tNp-tH-DVj" id="txz-mH-asF"/>
+                        <outlet property="table3" destination="tNp-tH-DVj" id="ven-Ra-1tO"/>
                         <segue destination="nRN-2H-3Uw" kind="unwind" identifier="segueToSearchVC" unwindAction="unwindToSearchVCWithSegue:" id="8aJ-fD-BOR"/>
                     </connections>
                 </viewController>
