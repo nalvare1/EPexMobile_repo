@@ -22,23 +22,43 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     @IBOutlet var table3: UITableView!
    
     
-    let cellContent3:[String] = ["Natalie", "Anthony", "David"]
+    //let cellContent3:[String] = ["Natalie", "Anthony", "David"]
+    
+    let projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
+    let projectOwners:[String] = ["Natalie", "Anthony", "David"]
+    let commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
+    let actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return cellContent3.count
+        return projectNames.count
     }
  
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell3 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Search_Results_Cell")
-        
-        cell3.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
+      //  let cell3 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Search_Results_Cell")
     
-        cell3.textLabel?.text = cellContent3[indexPath.row]
+        let cell3 = tableView.dequeueReusableCell(
+            withIdentifier: "Search_Results_Cell",
+            for: indexPath) as! SearchResultsTableViewCell
+        
+        let row = indexPath.row
+        cell3.projectNameLabel?.text = projectNames[row]
+        cell3.ownerLabel?.text = projectOwners[row]
+        cell3.commitDateLabel?.text = commitDates[row]
+        cell3.actualDateLabel?.text = actualDates[row]
+        
+     //   cell3.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
+    
+      //  cell3.textLabel?.text = cellContent3[indexPath.row]
     
         return cell3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 75; //Choose your custom row height
     }
  
     override func viewDidLoad() {

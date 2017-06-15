@@ -21,6 +21,7 @@
 		18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579A1EF04E7100E0724A /* DetailViewController.swift */; };
 		18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */; };
 		18CB881A1EF1ACC400F6BD7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CB88181EF1ACC400F6BD7C /* Main.storyboard */; };
+		18CB881C1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB881B1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		18A0579A1EF04E7100E0724A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		18CB88191EF1ACC400F6BD7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18CB881B1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsTableViewCell.swift; path = ../SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				1899D5811EF172DA0069C52D /* SearchResultsViewController.swift */,
 				1899D57F1EF16EF50069C52D /* SearchViewController.swift */,
 				18A0578A1EF04A7900E0724A /* Assets.xcassets */,
+				18CB881B1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift */,
 				18CB88181EF1ACC400F6BD7C /* Main.storyboard */,
 				18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */,
 				18A0578F1EF04A7900E0724A /* Info.plist */,
@@ -174,6 +177,7 @@
 				18A057861EF04A7900E0724A /* ViewController.swift in Sources */,
 				18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */,
 				1899D5821EF172DA0069C52D /* SearchResultsViewController.swift in Sources */,
+				18CB881C1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift in Sources */,
 				18A057841EF04A7900E0724A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

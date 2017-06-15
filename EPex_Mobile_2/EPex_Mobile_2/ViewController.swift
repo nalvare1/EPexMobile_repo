@@ -14,25 +14,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func buttonHome(_ sender: Any) {
            performSegue(withIdentifier: "segueToSplashScreenVCFromSavedProjectsVC", sender: self)
     }
-    let cellContent:[String] = ["Natalie", "Anthony", "David"]
+  //  let cellContent:[String] = ["Natalie", "Anthony", "David"]
     
+    let projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
+    let projectOwners:[String] = ["Natalie", "Anthony", "David"]
+    let commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
+    let actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
+    
+
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cellContent.count
+        return projectNames.count
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Project_Cell")
-       // let cell = tableView.dequeueReusableCell(withIdentifier: "Project_Cell", for: indexPath) as! ProjectsTableViewCell
+        //  let cell3 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Search_Results_Cell")
         
-        //cell.projectsNameLabel?.text = cellContent[indexPath.row]
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "Saved_Projects_Cell",
+            for: indexPath) as! SearchResultsTableViewCell
         
-        //UITableViewCell(style: ProjectsTableViewCell, reuseIdentifier: "Project_Cell")
-    
-       cell.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
+        let row = indexPath.row
+        cell.projectNameLabel?.text = projectNames[row]
+        cell.ownerLabel?.text = projectOwners[row]
+        cell.commitDateLabel?.text = commitDates[row]
+        cell.actualDateLabel?.text = actualDates[row]
         
-        cell.textLabel?.text = cellContent[indexPath.row]
+        //   cell.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
+        
+        //  cell.textLabel?.text = cellContent[indexPath.row]
         
         return cell
     }
@@ -42,6 +53,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         
         table.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 75; //Choose your custom row height
     }
     
      override func viewDidAppear(_ animated: Bool) {
