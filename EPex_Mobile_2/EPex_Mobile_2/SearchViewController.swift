@@ -12,8 +12,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     @IBOutlet var picker: UIPickerView!
 
-    @IBOutlet var ownerNameLabel: UITextField!
-    @IBOutlet var projectIDLabel: UITextField!
+    @IBOutlet var ownerNameTextField: UITextField!
+    @IBOutlet var projectIDTextField: UITextField!
    
     @IBAction func buttonHome2(_ sender: Any) {
          performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)
@@ -25,8 +25,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
        // let productLine = productLineLabel.text
         
         //clear text fields after search:
-        ownerNameLabel.text = ""
-        projectIDLabel.text = ""
+        ownerNameTextField.text = ""
+        projectIDTextField.text = ""
     //    productLineLabel.text = ""
         
      //   [self.performSegue(withIdentifier: "mySearchSegue", sender: self)]
@@ -46,6 +46,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
        // self.picker.delegate = self
        // self.picker.dataSource = self
         
+        //set default starting point for picker view:
+        picker.selectRow(2, inComponent: 0, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,17 +56,48 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
-    //keyboard (touch outside of keyboard):
+    //keyboards 1 and 2 (touch outside of keyboard):
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-    //keyboard(hit "Return"):
+    //keyboard 1 (hit "Return"):
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        func textFieldShouldReturn(textField: UITextField) -> Bool {
+            if textField == self.ownerNameTextField {
+                self.projectIDTextField.becomeFirstResponder()
+            }
+            
+            return true
+        }
         
-        textField.resignFirstResponder()
-        
+        //  textField.resignFirstResponder()
         return true
+    }
+    
+    private var kAssociationKeyNextField: UInt8 = 0
+    
+    //keyboard 2 (create "Done" button!):
+    func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle = UIBarStyle.default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SearchViewController.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.projectIDTextField.inputAccessoryView = doneToolbar
+    }
+    
+    func doneButtonAction() {
+        self.projectIDTextField.resignFirstResponder()
     }
     
     //picker view:

@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var selectedRow = 0
+    var selectedRow = -1
     
     var projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
     var projectOwners:[String] = ["Natalie", "Anthony", "David"]
@@ -21,23 +21,29 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     @IBAction func buttonSearchAgain(_ sender: Any) {
         performSegue(withIdentifier: "segueToSearchVC", sender: self)
     }
-
     
     @IBAction func buttonSave(_ sender: Any) {
         //!!SAVE THIS INFO SOMEHOW INTO SAVED PROJECTS BEFORE DELETION!!!
         
+        if selectedRow >= 0 {
         
-        //delete row (prob from arrays) after saving:
-        projectNames.remove(at: selectedRow)
-        projectOwners.remove(at: selectedRow)
-        commitDates.remove(at: selectedRow)
-        actualDates.remove(at: selectedRow)
+            //delete row (prob from arrays) after saving:
+            projectNames.remove(at: selectedRow)
+            projectOwners.remove(at: selectedRow)
+            commitDates.remove(at: selectedRow)
+            actualDates.remove(at: selectedRow)
         
-        //update table:
-        table3.reloadData()
+            //update table:
+            table3.reloadData()
+            
+            selectedRow = -1
+        }
         
     }
     
+    @IBAction func buttonHome(_ sender: Any) {
+         performSegue(withIdentifier: "segueToSplashScreenVCFromSearchResultsVC", sender: self)
+    }
     
     //let cellContent3:[String] = ["Natalie", "Anthony", "David"]
     

@@ -24,18 +24,26 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var tasksArr = [String]()
     
     @IBAction func buttonSave(_ sender: Any) {
-        //set task completion date!!!
+        if selectedRow >= 0 {
+            //set task completion date!!!
         
-        //remove task
-        tasksArr.remove(at: selectedRow)
-        table2.reloadData()
+            //remove task
+            tasksArr.remove(at: selectedRow)
+            table2.reloadData()
         
-        //return to current date:
-        datePicker.date = Date()
+            //return to current date:
+            datePicker.date = Date()
+            
+            selectedRow = -1
+        }
+
     }
     
+    @IBAction func buttonHome(_ sender: Any) {
+        performSegue(withIdentifier: "segueToSplashScreenVCFromDetailVC", sender: self)
+    }
     
-    var selectedRow = 0
+    var selectedRow = -1
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

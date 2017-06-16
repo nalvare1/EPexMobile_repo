@@ -156,49 +156,66 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPex Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t75-eP-Cf0">
-                                <rect key="frame" x="16" y="321.5" width="343" height="44.5"/>
+                                <rect key="frame" x="16" y="321" width="343" height="45"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="38"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-2w-ubU">
-                                <rect key="frame" x="106.5" y="467.5" width="162" height="36"/>
-                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
-                                <state key="normal" title="Search For Projects">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="My6-jN-LYI" kind="show" id="Kui-B1-tV2"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General_Electric_logo.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-Eb-fud">
                                 <rect key="frame" x="0.0" y="66" width="375" height="223"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gr-dX-gRE">
-                                <rect key="frame" x="125.5" y="423.5" width="124" height="36"/>
+                                <rect key="frame" x="137.5" y="423" width="100" height="36"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
-                                <state key="normal" title="Saved Projects">
+                                <state key="normal" title="How To Use">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GID-IA-m7S" kind="show" id="KBl-66-Odn"/>
+                                    <segue destination="prc-gr-T7m" kind="show" id="N8Y-dI-B0p"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFb-5r-rbO">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="search" id="jmB-hn-wba">
+                                        <connections>
+                                            <segue destination="My6-jN-LYI" kind="show" action="showDetailViewController:sender:" id="9Hs-pc-31v"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Search" id="94w-TC-VnJ">
+                                        <connections>
+                                            <segue destination="My6-jN-LYI" kind="show" id="Opm-C8-gqk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0Zm-cw-uW8"/>
+                                    <barButtonItem title="Saved Projects" id="kfE-st-fab">
+                                        <connections>
+                                            <segue destination="GID-IA-m7S" kind="show" id="usR-uM-EBG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="bookmarks" id="drN-ff-z4l">
+                                        <connections>
+                                            <segue destination="GID-IA-m7S" kind="show" id="U9m-ik-EzL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.65464650849999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5gr-dX-gRE" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="24u-ey-QZu"/>
+                            <constraint firstAttribute="trailing" secondItem="yFb-5r-rbO" secondAttribute="trailing" id="3NZ-N5-5sV"/>
+                            <constraint firstItem="yFb-5r-rbO" firstAttribute="leading" secondItem="G7z-Ah-Aps" secondAttribute="leading" id="6lT-gD-bqH"/>
                             <constraint firstItem="t75-eP-Cf0" firstAttribute="top" secondItem="EEl-Eb-fud" secondAttribute="bottom" constant="32.5" id="7qt-FK-TjY"/>
                             <constraint firstItem="t75-eP-Cf0" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="B82-7a-ghx"/>
                             <constraint firstItem="5gr-dX-gRE" firstAttribute="top" secondItem="gNv-EM-0DZ" secondAttribute="bottom" constant="28.5" id="CRI-um-rFj"/>
                             <constraint firstItem="gNv-EM-0DZ" firstAttribute="leading" secondItem="G7z-Ah-Aps" secondAttribute="leadingMargin" id="DNq-ga-nXQ"/>
                             <constraint firstItem="5gr-dX-gRE" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="Gbg-V6-UKh"/>
-                            <constraint firstItem="ycB-2w-ubU" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="P5H-cp-NfL"/>
                             <constraint firstItem="gNv-EM-0DZ" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="PMY-FV-Vvi"/>
                             <constraint firstItem="EEl-Eb-fud" firstAttribute="leading" secondItem="G7z-Ah-Aps" secondAttribute="leading" id="Q1w-ye-4v9"/>
                             <constraint firstItem="EEl-Eb-fud" firstAttribute="centerX" secondItem="G7z-Ah-Aps" secondAttribute="centerX" id="QNZ-Nc-RhU"/>
+                            <constraint firstItem="bKU-rI-4I9" firstAttribute="top" secondItem="yFb-5r-rbO" secondAttribute="bottom" id="XrV-Gz-zT2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t75-eP-Cf0" secondAttribute="trailing" id="ZHF-th-AwF"/>
-                            <constraint firstItem="ycB-2w-ubU" firstAttribute="top" secondItem="5gr-dX-gRE" secondAttribute="bottom" constant="8" id="ZvP-NK-JzN"/>
                             <constraint firstItem="t75-eP-Cf0" firstAttribute="leading" secondItem="G7z-Ah-Aps" secondAttribute="leadingMargin" id="b3h-Mf-kzx"/>
                             <constraint firstItem="t75-eP-Cf0" firstAttribute="centerY" secondItem="G7z-Ah-Aps" secondAttribute="centerY" constant="10" id="gC8-Xg-RuV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gNv-EM-0DZ" secondAttribute="trailing" id="hfT-ml-QUM"/>
@@ -337,9 +354,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ownerNameLabel" destination="DOI-oD-1X5" id="TwP-yg-9aj"/>
+                        <outlet property="ownerNameTextField" destination="DOI-oD-1X5" id="GuI-TK-mWc"/>
                         <outlet property="picker" destination="THJ-fu-tIj" id="FBP-hc-x51"/>
-                        <outlet property="projectIDLabel" destination="wpT-8z-ZEH" id="yEF-jY-j7s"/>
+                        <outlet property="projectIDTextField" destination="wpT-8z-ZEH" id="h3b-cc-kbc"/>
                         <segue destination="SSu-bH-CmV" kind="unwind" identifier="segueToSplashScreenVCFromSearchVC" unwindAction="unwindToSplashScreenVCWithSegue:" id="deA-ng-nEm"/>
                     </connections>
                 </viewController>
@@ -382,6 +399,12 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-Uc-1Tu">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
+                                    <barButtonItem title="Home" id="W24-yz-D0J">
+                                        <connections>
+                                            <action selector="buttonHome:" destination="je7-0p-otn" id="HVe-AT-tCg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TTw-ji-7g6"/>
                                     <barButtonItem title="Back To Projects" id="Bjh-tF-CcO">
                                         <connections>
                                             <action selector="buttonBackToProjects:" destination="je7-0p-otn" id="y7T-fr-YGS"/>
@@ -450,6 +473,7 @@
                         <outlet property="projectNameLabel" destination="mCq-WJ-6hk" id="gdT-mS-VQO"/>
                         <outlet property="table2" destination="JXk-ms-5NE" id="QyB-JM-ScL"/>
                         <segue destination="ar9-Im-e6G" kind="unwind" identifier="segueToSavedProjectsVC" unwindAction="unwindToSavedProjectsVCWithSegue:" id="ziO-JC-b1U"/>
+                        <segue destination="ar9-Im-e6G" kind="unwind" identifier="segueToSplashScreenVCFromDetailVC" unwindAction="unwindToSplashScreenVCWithSegue:" id="a7D-qP-M35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-Th-twc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -470,7 +494,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tNp-tH-DVj">
-                                <rect key="frame" x="0.0" y="143" width="375" height="480"/>
+                                <rect key="frame" x="0.0" y="142" width="375" height="481"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.050723220909999998" green="0.0064513355309999999" blue="0.15221941310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -537,7 +561,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMv-Zl-DAE">
-                                <rect key="frame" x="16" y="34" width="343" height="36"/>
+                                <rect key="frame" x="16" y="34" width="343" height="35"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -545,6 +569,12 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-xb-76w">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
+                                    <barButtonItem title="Home" id="z0p-6g-US7">
+                                        <connections>
+                                            <action selector="buttonHome:" destination="jle-uQ-Efk" id="WyX-6E-Ma6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7cj-KU-q5E"/>
                                     <barButtonItem title="Search Again" id="D5d-Pp-69X">
                                         <connections>
                                             <action selector="buttonSearchAgain:" destination="jle-uQ-Efk" id="avA-Mn-Ktn"/>
@@ -559,7 +589,7 @@
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnB-mD-Q7G">
-                                <rect key="frame" x="43.5" y="79" width="288" height="47"/>
+                                <rect key="frame" x="43.5" y="78" width="288" height="47"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="I9X-gs-L4D"/>
@@ -570,7 +600,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Owner                                          Actual Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-qc-jNh">
-                                <rect key="frame" x="43.5" y="106" width="288" height="21"/>
+                                <rect key="frame" x="43.5" y="105" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Fnw-ac-Neg"/>
                                     <constraint firstAttribute="width" constant="288" id="N6P-n1-uZ5"/>
@@ -580,7 +610,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Project Name                           Commit Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qo-Ww-iAB">
-                                <rect key="frame" x="43.5" y="79" width="288" height="21"/>
+                                <rect key="frame" x="43.5" y="78" width="288" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bSg-lN-jAQ"/>
                                     <constraint firstAttribute="width" constant="288" id="qlW-7j-aJr"/>
@@ -615,15 +645,82 @@
                     <connections>
                         <outlet property="table3" destination="tNp-tH-DVj" id="ven-Ra-1tO"/>
                         <segue destination="nRN-2H-3Uw" kind="unwind" identifier="segueToSearchVC" unwindAction="unwindToSearchVCWithSegue:" id="8aJ-fD-BOR"/>
+                        <segue destination="nRN-2H-3Uw" kind="unwind" identifier="segueToSplashScreenVCFromSearchResultsVC" unwindAction="unwindToSplashScreenVCWithSegue:" id="7Ey-Sd-Vuh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2S-j3-G8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nRN-2H-3Uw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2114" y="794"/>
+            <point key="canvasLocation" x="2026" y="794"/>
+        </scene>
+        <!--How To Use View Controller-->
+        <scene sceneID="4rQ-sI-Pa6">
+            <objects>
+                <viewController id="prc-gr-T7m" customClass="HowToUseViewController" customModule="EPex_Mobile_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z5c-el-kzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="3dW-ie-Ty9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="itk-kr-5ju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4X-jm-khr">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Jno-34-OAX"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Home" id="UfZ-Rp-IfB">
+                                        <connections>
+                                            <action selector="buttonHome:" destination="prc-gr-T7m" id="av9-cw-ir7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-uO-w0f">
+                                <rect key="frame" x="16" y="28" width="343" height="36"/>
+                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="412-oF-cTq">
+                                <rect key="frame" x="16" y="140" width="343" height="386"/>
+                                <mutableString key="text">1) Search: Search for projects on the EPex system by entering the owner name and project ID, and selecting the product line. Then hit "Search". 2) Search Results: Tap on a project to select it and hit "Save" to move it to Saved Projects.
+3) Saved Projects: View saved projects' names, owners, commit dates, and actual completion dates. Select on a project to view its tasks.
+4) Tasks: Tap on a project's task, select an actual completion date, and hit "Save". This will update the EPex online system.</mutableString>
+                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.65464650849999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZtR-uO-w0f" firstAttribute="top" secondItem="z5c-el-kzT" secondAttribute="bottom" constant="8" id="N8v-gR-cru"/>
+                            <constraint firstItem="c4X-jm-khr" firstAttribute="top" secondItem="412-oF-cTq" secondAttribute="bottom" constant="97" id="Th1-7i-0rZ"/>
+                            <constraint firstItem="412-oF-cTq" firstAttribute="trailing" secondItem="itk-kr-5ju" secondAttribute="trailingMargin" id="Ys4-E1-L7x"/>
+                            <constraint firstItem="412-oF-cTq" firstAttribute="leading" secondItem="itk-kr-5ju" secondAttribute="leadingMargin" id="dKK-JU-p5b"/>
+                            <constraint firstItem="ZtR-uO-w0f" firstAttribute="leading" secondItem="itk-kr-5ju" secondAttribute="leadingMargin" id="e5M-5Q-doB"/>
+                            <constraint firstItem="412-oF-cTq" firstAttribute="top" secondItem="ZtR-uO-w0f" secondAttribute="bottom" constant="76" id="ilL-DP-fVi"/>
+                            <constraint firstItem="3dW-ie-Ty9" firstAttribute="top" secondItem="c4X-jm-khr" secondAttribute="bottom" id="wAz-Sy-Hdc"/>
+                            <constraint firstItem="ZtR-uO-w0f" firstAttribute="trailing" secondItem="itk-kr-5ju" secondAttribute="trailingMargin" id="wIq-AR-2GC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ttq-E1-dxh" kind="unwind" identifier="segueToSplashScreenVCFromHowToUseVC" unwindAction="unwindToSplashScreenVCWithSegue:" id="pd7-2d-yWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h13-De-nu9" sceneMemberID="firstResponder"/>
+                <exit id="ttq-E1-dxh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-842.39999999999998" y="-18.440779610194905"/>
         </scene>
     </scenes>
     <resources>
         <image name="General_Electric_logo.svg.png" width="1024" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="usR-uM-EBG"/>
+        <segue reference="9Hs-pc-31v"/>
+    </inferredMetricsTieBreakers>
 </document>
