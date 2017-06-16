@@ -45,10 +45,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         // Connect data: **would be the code way of doing it (but i did it by using CTRL-drag!)
        // self.picker.delegate = self
        // self.picker.dataSource = self
-        
+ 
         //set default starting point for picker view:
-        picker.selectRow(2, inComponent: 0, animated: true)
-        
+        picker.selectRow(4, inComponent: 0, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,22 +62,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     //keyboard 1 (hit "Return"):
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        func textFieldShouldReturn(textField: UITextField) -> Bool {
-            if textField == self.ownerNameTextField {
-                self.projectIDTextField.becomeFirstResponder()
-            }
-            
-            return true
-        }
-        
-        //  textField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     
-    private var kAssociationKeyNextField: UInt8 = 0
+ //   private var kAssociationKeyNextField: UInt8 = 0
     
     //keyboard 2 (create "Done" button!):
-    func addDoneButtonOnKeyboard() {
+   /* func addDoneButtonOnKeyboard() {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         doneToolbar.barStyle = UIBarStyle.default
         
@@ -99,6 +90,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     func doneButtonAction() {
         self.projectIDTextField.resignFirstResponder()
     }
+     */
     
     //picker view:
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
