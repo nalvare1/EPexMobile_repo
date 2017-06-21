@@ -657,7 +657,7 @@
         <!--How To Use View Controller-->
         <scene sceneID="4rQ-sI-Pa6">
             <objects>
-                <viewController id="prc-gr-T7m" customClass="HowToUseViewController" customModule="EPex_Mobile_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="prc-gr-T7m" customClass="HowToUseViewController" customModule="EPex_Mobile_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z5c-el-kzT"/>
                         <viewControllerLayoutGuide type="bottom" id="3dW-ie-Ty9"/>
@@ -679,31 +679,43 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="412-oF-cTq">
-                                <rect key="frame" x="16" y="140" width="343" height="386"/>
-                                <string key="text">1) Search: Search for projects on the EPex system by entering the owner name and project ID, and selecting the product line. Then hit "Search". 2) Search Results: Tap on a project to select it and hit "Save" to move it to Saved Projects.
-3) Saved Projects: View saved projects' names, owners, commit dates, and actual completion dates. Select on a project to view its tasks.
-4) Tasks: Tap on a project's task, select an actual completion date, and hit "Save". This will update the EPex online system.</string>
-                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How To Use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-uO-w0f">
-                                <rect key="frame" x="16" y="28" width="343" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-uO-w0f">
+                                <rect key="frame" x="16" y="34" width="343" height="35.5"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVC-Re-aQK">
+                                <rect key="frame" x="16" y="100.5" width="343" height="460.5"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yI-9q-l95">
+                                        <rect key="frame" x="17" y="18" width="308" height="437.5"/>
+                                        <string key="text">1) Search: Search for projects on the EPex system by entering the owner name and project ID, and selecting the product line. Then hit "Search". 2) Search Results: Tap on a project to select it and hit "Save" to move it to Saved Projects.
+3) Saved Projects: View saved projects' names, owners, commit dates, and actual completion dates. Select on a project to view its tasks.
+4) Tasks: Tap on a project's task, select an actual completion date, and hit "Save". This will update the EPex online system.</string>
+                                        <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1yI-9q-l95" firstAttribute="leading" secondItem="UVC-Re-aQK" secondAttribute="leading" constant="17" id="Do2-Tz-rBe"/>
+                                    <constraint firstAttribute="trailing" secondItem="1yI-9q-l95" secondAttribute="trailing" constant="18" id="Guk-Uh-1aK"/>
+                                    <constraint firstItem="1yI-9q-l95" firstAttribute="centerX" secondItem="UVC-Re-aQK" secondAttribute="centerX" id="L8h-TM-nhb"/>
+                                    <constraint firstItem="1yI-9q-l95" firstAttribute="top" secondItem="UVC-Re-aQK" secondAttribute="top" constant="18" id="Wap-SH-64d"/>
+                                    <constraint firstAttribute="bottom" secondItem="1yI-9q-l95" secondAttribute="bottom" constant="17" id="mnY-OV-5yJ"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.65464650849999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="UVC-Re-aQK" firstAttribute="leading" secondItem="itk-kr-5ju" secondAttribute="leadingMargin" id="BQA-Jc-84k"/>
+                            <constraint firstItem="UVC-Re-aQK" firstAttribute="top" secondItem="ZtR-uO-w0f" secondAttribute="bottom" constant="31" id="Fz0-AX-Bk0"/>
                             <constraint firstItem="ZtR-uO-w0f" firstAttribute="top" secondItem="z5c-el-kzT" secondAttribute="bottom" constant="14" id="JE2-ro-syA"/>
-                            <constraint firstAttribute="trailing" secondItem="c4X-jm-khr" secondAttribute="trailing" id="KVA-EW-1VZ"/>
-                            <constraint firstItem="c4X-jm-khr" firstAttribute="top" secondItem="412-oF-cTq" secondAttribute="bottom" constant="97" id="Th1-7i-0rZ"/>
-                            <constraint firstItem="412-oF-cTq" firstAttribute="trailing" secondItem="itk-kr-5ju" secondAttribute="trailingMargin" id="Ys4-E1-L7x"/>
-                            <constraint firstItem="412-oF-cTq" firstAttribute="leading" secondItem="itk-kr-5ju" secondAttribute="leadingMargin" id="dKK-JU-p5b"/>
+                            <constraint firstAttribute="trailing" secondItem="c4X-jm-khr" secondAttribute="trailing" id="K5B-JP-v1r"/>
+                            <constraint firstItem="UVC-Re-aQK" firstAttribute="trailing" secondItem="itk-kr-5ju" secondAttribute="trailingMargin" id="NkS-xw-gi0"/>
                             <constraint firstItem="ZtR-uO-w0f" firstAttribute="leading" secondItem="itk-kr-5ju" secondAttribute="leadingMargin" id="e5M-5Q-doB"/>
-                            <constraint firstItem="412-oF-cTq" firstAttribute="top" secondItem="ZtR-uO-w0f" secondAttribute="bottom" constant="76" id="ilL-DP-fVi"/>
+                            <constraint firstItem="3dW-ie-Ty9" firstAttribute="top" secondItem="UVC-Re-aQK" secondAttribute="bottom" constant="106" id="osX-OK-Cfw"/>
                             <constraint firstItem="c4X-jm-khr" firstAttribute="leading" secondItem="itk-kr-5ju" secondAttribute="leading" id="q9D-JT-Sws"/>
                             <constraint firstItem="3dW-ie-Ty9" firstAttribute="top" secondItem="c4X-jm-khr" secondAttribute="bottom" id="wAz-Sy-Hdc"/>
                             <constraint firstItem="ZtR-uO-w0f" firstAttribute="trailing" secondItem="itk-kr-5ju" secondAttribute="trailingMargin" id="wIq-AR-2GC"/>
@@ -716,7 +728,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h13-De-nu9" sceneMemberID="firstResponder"/>
                 <exit id="ttq-E1-dxh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="311" y="794"/>
+            <point key="canvasLocation" x="309.60000000000002" y="793.8530734632684"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="pwV-Xm-2Cv">
