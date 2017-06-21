@@ -163,9 +163,6 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General_Electric_logo.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-Eb-fud">
                                 <rect key="frame" x="0.0" y="80" width="375" height="215"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="215" id="1BX-AI-T9R"/>
-                                </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFb-5r-rbO">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -218,6 +215,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="t75-eP-Cf0" secondAttribute="trailing" id="ZHF-th-AwF"/>
                             <constraint firstItem="t75-eP-Cf0" firstAttribute="centerY" secondItem="G7z-Ah-Aps" secondAttribute="centerY" constant="30" id="atM-Ca-vIk"/>
                             <constraint firstItem="t75-eP-Cf0" firstAttribute="leading" secondItem="G7z-Ah-Aps" secondAttribute="leadingMargin" id="b3h-Mf-kzx"/>
+                            <constraint firstItem="EEl-Eb-fud" firstAttribute="top" secondItem="F7t-0q-VEr" secondAttribute="bottom" constant="60" id="gYk-yO-rXa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gNv-EM-0DZ" secondAttribute="trailing" id="hfT-ml-QUM"/>
                             <constraint firstItem="bKU-rI-4I9" firstAttribute="top" secondItem="yFb-5r-rbO" secondAttribute="bottom" id="iJB-fd-ycp"/>
                             <constraint firstAttribute="trailing" secondItem="EEl-Eb-fud" secondAttribute="trailing" id="k9P-aP-iYQ"/>
@@ -249,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Line:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzQ-AI-D1u">
-                                <rect key="frame" x="16" y="253" width="343" height="27"/>
+                                <rect key="frame" x="16" y="252.5" width="343" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="1m9-xK-lzA"/>
                                     <constraint firstAttribute="height" constant="27" id="FGv-vZ-csY"/>
@@ -259,13 +257,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf5-i3-M0e">
-                                <rect key="frame" x="16" y="34" width="343" height="35.5"/>
+                                <rect key="frame" x="16" y="34" width="343" height="35"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-8z-ZEH">
-                                <rect key="frame" x="16" y="170" width="343" height="30"/>
+                                <rect key="frame" x="16" y="169.5" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="smO-ox-2yN"/>
                                 </constraints>
@@ -297,7 +295,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOI-oD-1X5">
-                                <rect key="frame" x="16" y="116" width="343" height="30"/>
+                                <rect key="frame" x="16" y="115.5" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iqb-Iy-3Kp"/>
                                 </constraints>
@@ -683,9 +681,9 @@
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="412-oF-cTq">
                                 <rect key="frame" x="16" y="140" width="343" height="386"/>
-                                <mutableString key="text">1) Search: Search for projects on the EPex system by entering the owner name and project ID, and selecting the product line. Then hit "Search". 2) Search Results: Tap on a project to select it and hit "Save" to move it to Saved Projects.
+                                <string key="text">1) Search: Search for projects on the EPex system by entering the owner name and project ID, and selecting the product line. Then hit "Search". 2) Search Results: Tap on a project to select it and hit "Save" to move it to Saved Projects.
 3) Saved Projects: View saved projects' names, owners, commit dates, and actual completion dates. Select on a project to view its tasks.
-4) Tasks: Tap on a project's task, select an actual completion date, and hit "Save". This will update the EPex online system.</mutableString>
+4) Tasks: Tap on a project's task, select an actual completion date, and hit "Save". This will update the EPex online system.</string>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -818,7 +816,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Landscape!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqf-8l-FAy">
-                                <rect key="frame" x="16" y="34" width="343" height="35.5"/>
+                                <rect key="frame" x="16" y="34" width="343" height="35"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
