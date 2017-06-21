@@ -48,6 +48,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
  
         //set default starting point for picker view:
         picker.selectRow(4, inComponent: 0, animated: true)
+        
+        //for number pad's done button:
+        self.addDoneButtonOnKeyboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,34 +66,56 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     //keyboard 1 (hit "Return"):
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        self.projectIDTextField.becomeFirstResponder()
         return true
     }
     
- //   private var kAssociationKeyNextField: UInt8 = 0
-    
-    //keyboard 2 (create "Done" button!):
-   /* func addDoneButtonOnKeyboard() {
+    //keyboards 1 and 2 (create "Next" and "Done" buttons!):
+    func addDoneButtonOnKeyboard() {
+        //next button:
+        let nextToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        nextToolbar.barStyle = UIBarStyle.default
+        
+        let flexSpace1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let next: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SearchViewController.nextButtonAction))
+        //^^this was actually just changed to a "Done" button while return was changed to "Next"!!
+        
+        var items1 = [UIBarButtonItem]()
+        items1.append(flexSpace1)
+        items1.append(next)
+        
+        nextToolbar.items = items1
+        nextToolbar.sizeToFit()
+        
+        self.ownerNameTextField.inputAccessoryView = nextToolbar
+        
+        
+        //done button:
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         doneToolbar.barStyle = UIBarStyle.default
         
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let flexSpace2 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SearchViewController.doneButtonAction))
         
-        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SearchViewController.doneButtonAction))
+        var items2 = [UIBarButtonItem]()
+        items2.append(flexSpace2)
+        items2.append(done)
         
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(done)
-        
-        doneToolbar.items = items
+        doneToolbar.items = items2
         doneToolbar.sizeToFit()
         
         self.projectIDTextField.inputAccessoryView = doneToolbar
     }
     
+    
     func doneButtonAction() {
         self.projectIDTextField.resignFirstResponder()
     }
-     */
+    
+    func nextButtonAction() {
+        self.ownerNameTextField.resignFirstResponder()
+      //  self.projectIDTextField.becomeFirstResponder()
+    }
     
     //picker view:
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

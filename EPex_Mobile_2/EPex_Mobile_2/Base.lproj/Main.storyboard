@@ -280,16 +280,16 @@
                                     <constraint firstAttribute="height" constant="44" id="Ism-mc-YvO"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Home" id="kPp-Qa-7BC">
-                                        <connections>
-                                            <action selector="buttonHome2:" destination="My6-jN-LYI" id="VJ6-7s-GdT"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tOp-zS-hlp"/>
                                     <barButtonItem title="Search" id="5Df-4i-XOv">
                                         <connections>
                                             <action selector="buttonSearch:" destination="My6-jN-LYI" id="UX1-3h-IW3"/>
                                             <segue destination="jle-uQ-Efk" kind="show" identifier="mySearchSegue" id="jGX-NA-v5I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tOp-zS-hlp"/>
+                                    <barButtonItem title="Home" id="kPp-Qa-7BC">
+                                        <connections>
+                                            <action selector="buttonHome2:" destination="My6-jN-LYI" id="VJ6-7s-GdT"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -301,7 +301,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
                                     <outlet property="delegate" destination="My6-jN-LYI" id="NiD-cG-CEF"/>
                                 </connections>
@@ -364,7 +364,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RbZ-QF-DBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SSu-bH-CmV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1191.2" y="793.8530734632684"/>
+            <point key="canvasLocation" x="2007" y="794"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8Wv-6F-vmH">
@@ -570,9 +570,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-xb-76w">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Home" id="z0p-6g-US7">
+                                    <barButtonItem title="Save" id="jl6-lX-ZYe">
                                         <connections>
-                                            <action selector="buttonHome:" destination="jle-uQ-Efk" id="WyX-6E-Ma6"/>
+                                            <action selector="buttonSave:" destination="jle-uQ-Efk" id="64S-0M-iCj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7cj-KU-q5E"/>
@@ -582,9 +582,9 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9gp-pD-mqT"/>
-                                    <barButtonItem title="Save" id="jl6-lX-ZYe">
+                                    <barButtonItem title="Home" id="z0p-6g-US7">
                                         <connections>
-                                            <action selector="buttonSave:" destination="jle-uQ-Efk" id="64S-0M-iCj"/>
+                                            <action selector="buttonHome:" destination="jle-uQ-Efk" id="WyX-6E-Ma6"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -652,7 +652,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2S-j3-G8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nRN-2H-3Uw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="794"/>
+            <point key="canvasLocation" x="1249" y="794"/>
         </scene>
         <!--How To Use View Controller-->
         <scene sceneID="4rQ-sI-Pa6">
