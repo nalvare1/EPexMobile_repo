@@ -20,10 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   //  let cellContent:[String] = ["Natalie", "Anthony", "David"]
     
     let projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
-    let projectOwners:[String] = ["Natalie", "Anthony", "David"]
-    let commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
-    let actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
-   
+    let projectOwners:[String] = ["1234", "5678", "9111"]
     
 
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,9 +38,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let row = indexPath.row
         cell.projectNameLabel?.text = projectNames[row]
-        cell.ownerLabel?.text = projectOwners[row]
-        cell.commitDateLabel?.text = commitDates[row]
-        cell.actualDateLabel?.text = actualDates[row]
+        cell.ownerName2Label?.text = projectOwners[row]
+        cell.ownerNameLabel?.text = ""
+
         
         //   cell.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
         
@@ -51,14 +48,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
+    var commitDates_DateType: [Date] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 75; //Choose your custom row height
+        return 50; //Choose your custom row height
     }
     
      override func viewDidAppear(_ animated: Bool) {

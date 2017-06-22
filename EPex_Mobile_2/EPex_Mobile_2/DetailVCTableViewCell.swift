@@ -1,19 +1,20 @@
 //
-//  SearchResultsTableViewCell.swift
+//  DetailVCTableViewCell.swift
 //  EPex_Mobile_2
 //
-//  Created by Apple on 6/15/17.
+//  Created by Apple on 6/22/17.
 //  Copyright © 2017 GeneralElectric. All rights reserved.
 //
 
 import UIKit
 
-class SearchResultsTableViewCell: UITableViewCell {
-    
-    @IBOutlet var projectNameLabel: UILabel!
-    @IBOutlet var ownerNameLabel: UILabel!
-    @IBOutlet var ownerName2Label: UILabel!
-    
+class DetailVCTableViewCell: UITableViewCell {
+
+
+    @IBOutlet var taskNameLabel: UILabel!
+    @IBOutlet var commitDateLabel: UILabel!
+    @IBOutlet var actualDateLabel: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()

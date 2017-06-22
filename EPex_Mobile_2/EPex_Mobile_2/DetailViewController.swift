@@ -21,16 +21,37 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var table2: UITableView!
     @IBOutlet var datePicker: UIDatePicker!
     
-    var tasksArr = [String]()
+    var tasksArr = ["Add Buttons", "Fix Display", "Read Data From Database"]
+    
+    var commitDates:[String] = ["06/29/2017", "10/26/2017", "01/13/2017"]
+    var actualDates:[String] = ["__/__/____", "__/__/____", "__/__/____"]
+    
+    
     
     @IBAction func buttonSave(_ sender: Any) {
         if selectedRow >= 0 {
+            let savedDate_Date = datePicker.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let savedDate_String = dateFormatter.string(from:savedDate_Date as Date)
+            
+            actualDates[selectedRow] = savedDate_String
+            table2.reloadData()
+            
+            selectedRow = -1
+        }
+    }
+    
+    @IBAction func buttonRemoveTask(_ sender: Any) {
+        if selectedRow >= 0 && actualDates[selectedRow] != "__/__/____" {
             //set task completion date!!!
-        
+            
             //remove task
             tasksArr.remove(at: selectedRow)
+            commitDates.remove(at: selectedRow)
+            actualDates.remove(at: selectedRow)
             table2.reloadData()
-        
+            
             //return to current date:
             datePicker.date = Date()
             
@@ -38,10 +59,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
 
     }
-    
-    @IBAction func buttonHome(_ sender: Any) {
+ /*   @IBAction func buttonHome(_ sender: Any) {
         performSegue(withIdentifier: "segueToSplashScreenVCFromDetailVC", sender: self)
     }
+ */
     
     var selectedRow = -1
     
@@ -52,19 +73,20 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell2 = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Project_Cell2")
+        let cell2 = tableView.dequeueReusableCell(
+            withIdentifier: "Project_Cell2",
+            for: indexPath) as! DetailVCTableViewCell
         
-         cell2.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
-        
-        cell2.textLabel?.text = tasksArr[indexPath.row]
+        let row = indexPath.row
+            cell2.taskNameLabel?.text = tasksArr[row]
+            cell2.commitDateLabel?.text = commitDates[row]
+            cell2.actualDateLabel?.text = actualDates[row]
         
         return cell2
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tasksArr = ["Add Buttons", "Fix Display", "Read Data From Database"]
         
         projectNameLabel.text = UserDefaults.standard.object(forKey: "projectName") as? String
     }
@@ -77,6 +99,9 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         projectNameLabel.text = UserDefaults.standard.object(forKey: "projectName") as? String
         
         table2.reloadData()
+        
+        //saving commit dates to test notifications:
+           UserDefaults.standard.set(commitDates, forKey: "commitDates_StringArr")
     }
 
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

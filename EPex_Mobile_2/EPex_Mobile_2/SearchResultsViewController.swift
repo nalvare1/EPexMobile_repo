@@ -12,10 +12,7 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     var selectedRow = -1
     
     var projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
-    var projectOwners:[String] = ["Natalie", "Anthony", "David"]
-    var commitDates:[String] = ["09/06/17", "10/26/17", "01/13/17"]
-    var actualDates:[String] = ["09/06/96", "10/26/98", "01/13/99"]
-
+    var projectOwners:[String] = ["1234", "5678", "9111"]
     
     @IBOutlet var table3: UITableView!
     @IBAction func buttonSearchAgain(_ sender: Any) {
@@ -30,8 +27,6 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
             //delete row (prob from arrays) after saving:
             projectNames.remove(at: selectedRow)
             projectOwners.remove(at: selectedRow)
-            commitDates.remove(at: selectedRow)
-            actualDates.remove(at: selectedRow)
         
             //update table:
             table3.reloadData()
@@ -64,9 +59,9 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
         
         let row = indexPath.row
         cell3.projectNameLabel?.text = projectNames[row]
-        cell3.ownerLabel?.text = projectOwners[row]
-        cell3.commitDateLabel?.text = commitDates[row]
-        cell3.actualDateLabel?.text = actualDates[row]
+        cell3.ownerNameLabel?.text = projectOwners[row]
+        cell3.ownerName2Label?.text = ""
+
         
      //   cell3.textLabel?.font = UIFont(name: "GE Inspira", size: 16)
     
@@ -77,7 +72,7 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 75; //Choose your custom row height
+        return 50; //Choose your custom row height
     }
  
     override func viewDidLoad() {
