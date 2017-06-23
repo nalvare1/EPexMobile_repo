@@ -14,6 +14,9 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     var projectNames:[String] = ["Make An App", "Figure out Search Results", "Do Something Else"]
     var projectOwners:[String] = ["1234", "5678", "9111"]
     
+    
+    @IBOutlet var Label2: UILabel!
+    
     @IBOutlet var table3: UITableView!
     @IBAction func buttonSearchAgain(_ sender: Any) {
         performSegue(withIdentifier: "segueToSearchVC", sender: self)
@@ -84,6 +87,34 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
     
     override func viewDidAppear(_ animated: Bool) {
         table3.reloadData()
+        
+        
+        if let searchArr = UserDefaults.standard.object(forKey: "searchArr") as? [String] {
+            var ownername = ""
+            var projectid = ""
+            var prodline = ""
+            
+            if searchArr[0] != "" {
+                ownername = searchArr[0]
+            } else {
+                ownername = "None"
+            }
+            if searchArr[1] != "" {
+                projectid = searchArr[1]
+            } else {
+                projectid = "None"
+            }
+            if searchArr[2] != "" {
+                prodline = searchArr[2]
+            } else {
+                prodline = "None"
+            }
+            //FIX THIS BASED ON IF IT EXISTS OR NOT!!!
+            Label2.text = "Owner Name: " + ownername + "\n" + "Project ID: " + projectid + "\n" + "Product Line: " + prodline + "\n"
+        } else {
+            Label2.text = "Error."
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

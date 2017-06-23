@@ -19,21 +19,30 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
          performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)
     }
     @IBAction func buttonSearch(_ sender: Any) {
-            //perform search:
-       // let ownerName = ownerNameLabel.text
-       // let projectID = projectIDLabel.text
-       // let productLine = productLineLabel.text
+        //save search data for search results:
+        let hi = picker.selectedRow(inComponent: 0)
+        print("\(hi)")
+        let ownerName = ownerNameTextField.text
+        let projectID = projectIDTextField.text
+        let productLine = pickerData[hi]
+     
+        print("hi")
+       // print("OwnerName: " + ownerName!)
+       // print(ownerName! + " " + projectID! + " " + productLine)
+        let searchArr = [ownerName, projectID, productLine]
+        print(searchArr)
+        UserDefaults.standard.set(searchArr, forKey: "searchArr")
         
+        //perform actual search!!
+        
+        /* DO THAT HERE!! */
+
         //clear text fields after search:
         ownerNameTextField.text = ""
         projectIDTextField.text = ""
-    //    productLineLabel.text = ""
         
-     //   [self.performSegue(withIdentifier: "mySearchSegue", sender: self)]
-
-         performSegue(withIdentifier: "mySearchSegue", sender: self)
-       
-   //     [self presentViewController:myViewController animated:YES completion:nil];
+        //go to search results:
+       // performSegue(withIdentifier: "mySearchSegue2", sender: self)
     }
     
          //these are the Product Line options from EPex
@@ -51,6 +60,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         
         //for number pad's done button:
         self.addDoneButtonOnKeyboard()
+        
     }
 
     override func didReceiveMemoryWarning() {

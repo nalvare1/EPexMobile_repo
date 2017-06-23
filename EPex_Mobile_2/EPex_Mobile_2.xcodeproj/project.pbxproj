@@ -21,6 +21,7 @@
 		18A0578E1EF04A7900E0724A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A0578C1EF04A7900E0724A /* LaunchScreen.storyboard */; };
 		18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579A1EF04E7100E0724A /* DetailViewController.swift */; };
 		18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */; };
+		18C158F61EFC2057006C682D /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C158F51EFC2057006C682D /* SplitViewController.swift */; };
 		18CB881A1EF1ACC400F6BD7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CB88181EF1ACC400F6BD7C /* Main.storyboard */; };
 		18CB881C1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB881B1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift */; };
 		18CB881E1EF438B600F6BD7C /* HowToUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB881D1EF438B600F6BD7C /* HowToUseViewController.swift */; };
@@ -43,6 +44,7 @@
 		18A0578F1EF04A7900E0724A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A0579A1EF04E7100E0724A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18A0579C1EF04E8900E0724A /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		18C158F51EFC2057006C682D /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		18CB88191EF1ACC400F6BD7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CB881B1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsTableViewCell.swift; path = ../SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		18CB881D1EF438B600F6BD7C /* HowToUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		18A057771EF04A7900E0724A = {
 			isa = PBXGroup;
 			children = (
+				18C158F51EFC2057006C682D /* SplitViewController.swift */,
 				18CB881D1EF438B600F6BD7C /* HowToUseViewController.swift */,
 				18A057821EF04A7900E0724A /* EPex_Mobile_2 */,
 				18A057811EF04A7900E0724A /* Products */,
@@ -183,6 +186,7 @@
 				18A0579B1EF04E7100E0724A /* DetailViewController.swift in Sources */,
 				18A057861EF04A7900E0724A /* ViewController.swift in Sources */,
 				18A0579D1EF04E8900E0724A /* SplashScreenViewController.swift in Sources */,
+				18C158F61EFC2057006C682D /* SplitViewController.swift in Sources */,
 				18CB881E1EF438B600F6BD7C /* HowToUseViewController.swift in Sources */,
 				1899D5821EF172DA0069C52D /* SearchResultsViewController.swift in Sources */,
 				18CB881C1EF2F59700F6BD7C /* SearchResultsTableViewCell.swift in Sources */,
