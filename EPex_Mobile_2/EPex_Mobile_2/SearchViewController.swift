@@ -19,30 +19,63 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
          performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)
     }
     @IBAction func buttonSearch(_ sender: Any) {
+        /*
         //save search data for search results:
         let hi = picker.selectedRow(inComponent: 0)
         print("\(hi)")
         let ownerName = ownerNameTextField.text
         let projectID = projectIDTextField.text
         let productLine = pickerData[hi]
-     
-        print("hi")
-       // print("OwnerName: " + ownerName!)
-       // print(ownerName! + " " + projectID! + " " + productLine)
-        let searchArr = [ownerName, projectID, productLine]
+        
+        var searchArr:[String]
+        var success = false
+        
+        let searchObject = UserDefaults.standard.object(forKey: "searchArr")
+
+        if let tempArr = searchObject as? [String] {
+            searchArr = tempArr
+            var i = 0
+            while i <= 2 {
+                searchArr.remove(at: 0)
+                i += 1
+            }
+            
+            searchArr.append(ownerName!)
+            searchArr.append(projectID!)
+            searchArr.append(productLine)
+        } else {
+            searchArr = [ownerName!, projectID!, productLine]
+        }
+        
+        var j = 0
+        while j <= 2 {
+            if searchArr[j] == "" {
+                searchArr[j] = "None"
+            }
+            j += 1
+        }
+        
         print(searchArr)
-        UserDefaults.standard.set(searchArr, forKey: "searchArr")
+        
+        if !success {
+            UserDefaults.standard.set(searchArr, forKey: "searchArr")
+            success = true
+        }
+      //   let searchObject2 = UserDefaults.standard.object(forKey: "searchArr") as? [String]
+        
+     //   print(searchObject2!)
+        
         
         //perform actual search!!
         
         /* DO THAT HERE!! */
-
-        //clear text fields after search:
-        ownerNameTextField.text = ""
-        projectIDTextField.text = ""
         
         //go to search results:
-       // performSegue(withIdentifier: "mySearchSegue2", sender: self)
+        if success {
+     //       self.performSegue(withIdentifier: "mySearchSegue2", sender: self)
+        }
+ 
+ */
     }
     
          //these are the Product Line options from EPex
@@ -61,6 +94,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         //for number pad's done button:
         self.addDoneButtonOnKeyboard()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //do NOT clear text fields after search (looks better without clearing!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,6 +177,32 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         return String(pickerData[row])
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mySearchSegue" {
+            let nextViewController = segue.destination as! SearchResultsViewController
+            
+            //save search data for search results:
+            let hi = picker.selectedRow(inComponent: 0)
+            print("\(hi)")
+            let ownerName = ownerNameTextField.text
+            let projectID = projectIDTextField.text
+            let productLine = pickerData[hi]
+            
+            var searchArr = [ownerName!, projectID!, productLine]
+
+            var j = 0
+            while j <= 2 {
+                if searchArr[j] == "" {
+                    searchArr[j] = "None"
+                }
+                j += 1
+            }
+            
+            print(searchArr)
+            
+            nextViewController.searchArr = searchArr
+        }
+    }
     
     
      @IBAction func unwindToSearchVC(segue: UIStoryboardSegue) {}

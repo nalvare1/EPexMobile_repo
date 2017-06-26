@@ -85,36 +85,26 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
         table3.reloadData()
     }
     
+    var searchArr: [String] = []
+
     override func viewDidAppear(_ animated: Bool) {
         table3.reloadData()
         
+     /*   let searchObject = UserDefaults.standard.object(forKey: "searchArr") as? [String]
         
-        if let searchArr = UserDefaults.standard.object(forKey: "searchArr") as? [String] {
-            var ownername = ""
-            var projectid = ""
-            var prodline = ""
+        print(searchObject ?? "Error in getting user data")
+        
+        if let tempArr = searchObject {
+            searchArr = tempArr
             
-            if searchArr[0] != "" {
-                ownername = searchArr[0]
-            } else {
-                ownername = "None"
-            }
-            if searchArr[1] != "" {
-                projectid = searchArr[1]
-            } else {
-                projectid = "None"
-            }
-            if searchArr[2] != "" {
-                prodline = searchArr[2]
-            } else {
-                prodline = "None"
-            }
-            //FIX THIS BASED ON IF IT EXISTS OR NOT!!!
-            Label2.text = "Owner Name: " + ownername + "\n" + "Project ID: " + projectid + "\n" + "Product Line: " + prodline + "\n"
-        } else {
-            Label2.text = "Error."
+            Label2.text = "Owner Name: " + searchArr[0] + "\n" + "Project ID: " + searchArr[1] + "\n" + "Product Line: " + searchArr[2] + "\n"
+            
+             print(searchArr)
         }
+    */
+         Label2.text = "Owner Name: " + searchArr[0] + "\n" + "Project ID: " + searchArr[1] + "\n" + "Product Line: " + searchArr[2] + "\n"
         
+        print(searchArr)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
