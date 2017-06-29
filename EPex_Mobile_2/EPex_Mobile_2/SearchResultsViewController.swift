@@ -102,7 +102,7 @@ class SearchResultsViewController:  UIViewController, UITableViewDelegate, UITab
              print(searchArr)
         }
     */
-         Label2.text = "Owner Name: " + searchArr[0] + "\n" + "Project ID: " + searchArr[1] + "\n" + "Product Line: " + searchArr[2] + "\n"
+         Label2.text = "Owner Name: " + searchArr[0] + "\n" + "Project ID: " + searchArr[1] + "\n" + "Product Line: " + searchArr[2]
         
         print(searchArr)
     }
