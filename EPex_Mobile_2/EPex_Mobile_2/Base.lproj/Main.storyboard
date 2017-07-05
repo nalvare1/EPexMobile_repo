@@ -269,12 +269,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tOp-zS-hlp"/>
-                                    <barButtonItem title="Save" id="5hv-Ct-htz">
-                                        <connections>
-                                            <action selector="buttonSearch:" destination="My6-jN-LYI" id="9fX-md-HZF"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ul9-Ly-P0i"/>
                                     <barButtonItem title="Search" id="5Df-4i-XOv">
                                         <connections>
                                             <action selector="buttonSearch:" destination="My6-jN-LYI" id="UX1-3h-IW3"/>
@@ -423,7 +417,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TTw-ji-7g6"/>
-                                    <barButtonItem title="Remove Task" id="Ama-dI-HZf">
+                                    <barButtonItem title="Remove Milestone" id="Ama-dI-HZf">
                                         <connections>
                                             <action selector="buttonRemoveTask:" destination="je7-0p-otn" id="Uq8-JP-ehM"/>
                                         </connections>
@@ -451,7 +445,7 @@
                                     <!--1892-01-01 12:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete A Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEa-eT-3kR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete A Milestone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEa-eT-3kR">
                                 <rect key="frame" x="16" y="474" width="343" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Jy5-JH-e9W"/>
@@ -664,11 +658,20 @@
                                 <rect key="frame" x="16" y="100" width="343" height="461"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yI-9q-l95">
-                                        <rect key="frame" x="17" y="18" width="308" height="437.5"/>
-                                        <string key="text">1) Search: Search for projects on the EPex system by entering the owner name and project ID, and selecting the product line. Then hit "Search".
-2) Search Results: Tap on a project to select it and hit "Save" to move it to Saved Projects.
-3) Saved Projects: View saved projects' names, owners, commit dates, and actual completion dates. Select on a project to view its tasks.
-4) Tasks: Tap on a project's task, select an actual completion date, and hit "Save". This will update the EPex online system.</string>
+                                        <rect key="frame" x="17" y="18" width="308" height="540.5"/>
+                                        <mutableString key="text" base64-UTF8="YES">
+MSkgU2VhcmNoOiBTZWFyY2ggZm9yIHByb2plY3RzIG9uIHRoZSBFUGV4IHN5c3RlbSBieSBlbnRlcmlu
+ZyB0aGUgb3duZXIgbmFtZSBhbmQvb3IgcHJvamVjdCBJRCwgYW5kIHNlbGVjdGluZyB0aGUgcHJvZHVj
+dCBsaW5lLiBUaGVuLCBoaXQgIlNlYXJjaCIuCjIpIFNlYXJjaCBSZXN1bHRzOiAIVGFwIG9uIGEgcHJv
+amVjdCB0byBzZWxlY3QgaXQgYW5kIGhpdCAiU2F2ZSIgdG8gbW92ZSBpdCB0byBTYXZlZCBQcm9qZWN0
+cy4gVGhlIGRpc3BsYXkgd2lsbCBzaG93IHdoYXQgc2VhcmNoIGNyaXRlcmlhIHdhcyB1c2VkLgozKSBT
+YXZlZCBQcm9qZWN0czogVmlldyBzYXZlZCBwcm9qZWN0cycgbmFtZXMsIG93bmVycywgZm9yZWNhc3Qg
+ZGF0ZXMsIGFuZCBhY3R1YWwgY29tcGxldGlvbiBkYXRlcy4gU2VsZWN0IG9uIGEgcHJvamVjdCB0byBs
+b29rIGF0IGl0cyBtaWxlc3RvbmVzLgo0KSBNaWxlc3RvbmVzOiBUYXAgb24gYSBwcm9qZWN0J3MgbWls
+ZXN0b25lLCBzZWxlY3QgYW4gYWN0dWFsIGNvbXBsZXRpb24gZGF0ZSwgYW5kIGhpdCAiU2F2ZSIuIFJl
+bW92ZSBpdCBmcm9tIHlvdXIgc2F2ZWQgbWlsZXN0b25lcyBieSB0YXBwaW5nIGl0IGFuZCBzZWxlY3Rp
+bmcgIlJlbW92ZSBNaWxlc3RvbmUiLg
+</mutableString>
                                         <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1076,216 +1079,6 @@
                 <exit id="5ay-j8-WNh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2265" y="1562"/>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="86X-of-rD7">
-            <objects>
-                <viewController id="Zer-vT-eXC" customClass="SplitViewController" customModule="EPex_Mobile_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jVl-u8-lfN"/>
-                        <viewControllerLayoutGuide type="bottom" id="ezc-dV-lcs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OHl-M4-gqS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ome-5d-tyO">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Back " id="ce5-r4-C1V">
-                                        <connections>
-                                            <action selector="buttonBackToProjects:" destination="Zer-vT-eXC" id="aV9-Sx-QVU"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="One-tg-e7T"/>
-                                    <barButtonItem title="Remove Task" id="fCY-be-eZb">
-                                        <connections>
-                                            <action selector="buttonRemoveTask:" destination="Zer-vT-eXC" id="mhj-8n-GVy"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="La9-oy-2vy"/>
-                                    <barButtonItem title="Save" id="XWJ-F6-Zd6">
-                                        <connections>
-                                            <action selector="buttonSave:" destination="Zer-vT-eXC" id="eeS-d3-eJa"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing Fake Split" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xt-Wm-rBp">
-                                <rect key="frame" x="16" y="34" width="343" height="38"/>
-                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JSz-mZ-n42">
-                                <rect key="frame" x="153" y="508" width="222" height="115"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="XpU-Kx-1Ji"/>
-                                    <constraint firstAttribute="width" constant="222" id="mBC-ZD-fby"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="519144907.57028198">
-                                    <!--2017-06-14 14:55:07 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3439713600">
-                                    <!--1892-01-01 12:00:00 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete A Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLr-u5-0hk">
-                                <rect key="frame" x="214" y="473" width="161" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="Pd5-dG-XzN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N3n-J1-iqe">
-                                <rect key="frame" x="153" y="88" width="222" height="377"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Project_Cell2" rowHeight="120" id="v3f-2H-aLE" customClass="DetailVCTableViewCell" customModule="EPex_Mobile_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="222" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v3f-2H-aLE" id="bpP-06-kL8">
-                                            <rect key="frame" x="0.0" y="0.0" width="222" height="119.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-ve-kmC">
-                                                    <rect key="frame" x="8" y="11" width="157" height="21"/>
-                                                    <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__/__/____" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAQ-PU-THS">
-                                                    <rect key="frame" x="8" y="40" width="88" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="4nk-3h-33X"/>
-                                                        <constraint firstAttribute="height" constant="21" id="BGz-Q2-aUI"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__/__/____" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsh-Ne-He8">
-                                                    <rect key="frame" x="8" y="80" width="86" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="86" id="O47-0D-yw0"/>
-                                                        <constraint firstAttribute="height" constant="21" id="wC8-iu-3lp"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="hzp-ve-kmC" secondAttribute="trailing" constant="49" id="0Sy-WV-s0f"/>
-                                                <constraint firstItem="Gsh-Ne-He8" firstAttribute="top" secondItem="RAQ-PU-THS" secondAttribute="bottom" constant="19" id="1ck-vh-6nV"/>
-                                                <constraint firstItem="hzp-ve-kmC" firstAttribute="top" secondItem="bpP-06-kL8" secondAttribute="topMargin" constant="3" id="LrH-Qt-bXW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Gsh-Ne-He8" secondAttribute="bottom" constant="10.5" id="U6k-Ys-yKc"/>
-                                                <constraint firstItem="RAQ-PU-THS" firstAttribute="top" secondItem="hzp-ve-kmC" secondAttribute="bottom" constant="8" symbolic="YES" id="azj-fd-Nwm"/>
-                                                <constraint firstItem="RAQ-PU-THS" firstAttribute="leading" secondItem="Gsh-Ne-He8" secondAttribute="leading" id="bCe-4g-yao"/>
-                                                <constraint firstItem="hzp-ve-kmC" firstAttribute="leading" secondItem="RAQ-PU-THS" secondAttribute="leading" id="lbO-Dm-f1e"/>
-                                                <constraint firstItem="hzp-ve-kmC" firstAttribute="leading" secondItem="bpP-06-kL8" secondAttribute="leadingMargin" id="wp0-pz-dZo"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="actualDateLabel" destination="Gsh-Ne-He8" id="9sS-mi-uPa"/>
-                                            <outlet property="commitDateLabel" destination="RAQ-PU-THS" id="xxC-R6-ydd"/>
-                                            <outlet property="taskNameLabel" destination="hzp-ve-kmC" id="lkO-ok-MRl"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="je7-0p-otn" id="m9K-cY-FbC"/>
-                                    <outlet property="delegate" destination="je7-0p-otn" id="fMG-tU-t7Z"/>
-                                </connections>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yei-rs-6MQ">
-                                <rect key="frame" x="-1" y="89" width="146" height="488"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexColor" red="0.050723220909999998" green="0.0064513355309999999" blue="0.15221941310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Saved_Projects_Cell" rowHeight="82" id="MV6-6k-aP6" customClass="SearchResultsTableViewCell" customModule="EPex_Mobile_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="146" height="82"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MV6-6k-aP6" id="zsj-v9-MEH">
-                                            <rect key="frame" x="0.0" y="0.0" width="146" height="81.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgY-E1-EDA">
-                                                    <rect key="frame" x="8" y="8" width="130" height="26"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="26" id="SUp-9G-7P3"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPex #" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7Z-tQ-yb2">
-                                                    <rect key="frame" x="8" y="42" width="56.5" height="39"/>
-                                                    <fontDescription key="fontDescription" name="GEInspira" family="GE Inspira" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rgY-E1-EDA" firstAttribute="trailing" secondItem="zsj-v9-MEH" secondAttribute="trailingMargin" id="9EO-Bc-FMK"/>
-                                                <constraint firstItem="j7Z-tQ-yb2" firstAttribute="top" secondItem="rgY-E1-EDA" secondAttribute="bottom" constant="8" symbolic="YES" id="AhD-zt-6NV"/>
-                                                <constraint firstItem="rgY-E1-EDA" firstAttribute="top" secondItem="zsj-v9-MEH" secondAttribute="topMargin" id="NxC-uT-mZN"/>
-                                                <constraint firstItem="rgY-E1-EDA" firstAttribute="leading" secondItem="zsj-v9-MEH" secondAttribute="leadingMargin" id="PCR-U8-yFc"/>
-                                                <constraint firstItem="rgY-E1-EDA" firstAttribute="leading" secondItem="j7Z-tQ-yb2" secondAttribute="leading" id="clA-ac-gqD"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="j7Z-tQ-yb2" secondAttribute="bottom" constant="-7.5" id="sHo-mz-siK"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="ownerName2Label" destination="j7Z-tQ-yb2" id="EqX-Ds-JHf"/>
-                                            <outlet property="projectNameLabel" destination="rgY-E1-EDA" id="iNn-WY-b8m"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="GID-IA-m7S" id="vtN-x5-tis"/>
-                                    <outlet property="delegate" destination="GID-IA-m7S" id="1vx-eb-lyI"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.074882440270000003" green="0.71863442659999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="8xt-Wm-rBp" firstAttribute="top" secondItem="jVl-u8-lfN" secondAttribute="bottom" constant="14" id="08F-Nh-7EI"/>
-                            <constraint firstItem="WLr-u5-0hk" firstAttribute="top" secondItem="N3n-J1-iqe" secondAttribute="bottom" constant="8" symbolic="YES" id="7er-mn-GmK"/>
-                            <constraint firstItem="N3n-J1-iqe" firstAttribute="top" secondItem="8xt-Wm-rBp" secondAttribute="bottom" constant="16" id="Cvw-Gv-YYq"/>
-                            <constraint firstItem="yei-rs-6MQ" firstAttribute="top" secondItem="8xt-Wm-rBp" secondAttribute="bottom" constant="17" id="KXe-E9-Mcu"/>
-                            <constraint firstItem="ome-5d-tyO" firstAttribute="leading" secondItem="OHl-M4-gqS" secondAttribute="leading" id="Mvd-RR-TcN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8xt-Wm-rBp" secondAttribute="trailing" id="NRD-05-ZVX"/>
-                            <constraint firstAttribute="trailing" secondItem="ome-5d-tyO" secondAttribute="trailing" id="O0m-Ze-4f8"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="trailing" secondItem="ome-5d-tyO" secondAttribute="trailing" id="RC9-vk-JhE"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="leading" secondItem="yei-rs-6MQ" secondAttribute="trailing" constant="8" id="Xvm-c5-8uQ"/>
-                            <constraint firstItem="ezc-dV-lcs" firstAttribute="top" secondItem="ome-5d-tyO" secondAttribute="bottom" id="aLz-6V-Tbb"/>
-                            <constraint firstItem="yei-rs-6MQ" firstAttribute="centerY" secondItem="OHl-M4-gqS" secondAttribute="centerY" id="eYc-lc-rO8"/>
-                            <constraint firstItem="yei-rs-6MQ" firstAttribute="leading" secondItem="OHl-M4-gqS" secondAttribute="leadingMargin" constant="-17" id="f0f-vN-bNE"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="leading" secondItem="yei-rs-6MQ" secondAttribute="trailing" constant="8" symbolic="YES" id="gn9-m7-FK0"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="trailing" secondItem="WLr-u5-0hk" secondAttribute="trailing" id="j4L-cc-DTx"/>
-                            <constraint firstItem="8xt-Wm-rBp" firstAttribute="centerX" secondItem="OHl-M4-gqS" secondAttribute="centerX" id="jwS-Yc-4ay"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="bottom" secondItem="ome-5d-tyO" secondAttribute="top" id="pWe-MI-5f6"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="top" secondItem="WLr-u5-0hk" secondAttribute="bottom" constant="8" id="prW-Yo-fSq"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="trailing" secondItem="N3n-J1-iqe" secondAttribute="trailing" id="q4O-5h-n74"/>
-                            <constraint firstItem="JSz-mZ-n42" firstAttribute="leading" secondItem="N3n-J1-iqe" secondAttribute="leading" id="qOL-ST-fxc"/>
-                            <constraint firstItem="8xt-Wm-rBp" firstAttribute="leading" secondItem="OHl-M4-gqS" secondAttribute="leadingMargin" id="ttW-Ql-3iO"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="datePicker" destination="JSz-mZ-n42" id="gO9-Ma-9uL"/>
-                        <outlet property="projectNameLabel" destination="8xt-Wm-rBp" id="ls7-2A-TYJ"/>
-                        <segue destination="6Zb-vs-N8k" kind="unwind" identifier="segueToSavedProjectsVC" unwindAction="unwindToSavedProjectsVCWithSegue:" id="k2p-2l-QCl"/>
-                    </connections>
-                </viewController>
-                <exit id="6Zb-vs-N8k" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfx-nm-Ktf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3058.4000000000001" y="34.632683658170919"/>
         </scene>
     </scenes>
     <resources>

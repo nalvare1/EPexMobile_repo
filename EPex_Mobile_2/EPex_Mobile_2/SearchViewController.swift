@@ -19,63 +19,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
          performSegue(withIdentifier: "segueToSplashScreenVCFromSearchVC", sender: self)
     }
     @IBAction func buttonSearch(_ sender: Any) {
-        /*
-        //save search data for search results:
-        let hi = picker.selectedRow(inComponent: 0)
-        print("\(hi)")
-        let ownerName = ownerNameTextField.text
-        let projectID = projectIDTextField.text
-        let productLine = pickerData[hi]
-        
-        var searchArr:[String]
-        var success = false
-        
-        let searchObject = UserDefaults.standard.object(forKey: "searchArr")
-
-        if let tempArr = searchObject as? [String] {
-            searchArr = tempArr
-            var i = 0
-            while i <= 2 {
-                searchArr.remove(at: 0)
-                i += 1
-            }
-            
-            searchArr.append(ownerName!)
-            searchArr.append(projectID!)
-            searchArr.append(productLine)
-        } else {
-            searchArr = [ownerName!, projectID!, productLine]
-        }
-        
-        var j = 0
-        while j <= 2 {
-            if searchArr[j] == "" {
-                searchArr[j] = "None"
-            }
-            j += 1
-        }
-        
-        print(searchArr)
-        
-        if !success {
-            UserDefaults.standard.set(searchArr, forKey: "searchArr")
-            success = true
-        }
-      //   let searchObject2 = UserDefaults.standard.object(forKey: "searchArr") as? [String]
-        
-     //   print(searchObject2!)
-        
-        
-        //perform actual search!!
-        
-        /* DO THAT HERE!! */
-        
-        //go to search results:
-        if success {
-     //       self.performSegue(withIdentifier: "mySearchSegue2", sender: self)
-        }
- 
- */
+     //code is in "override func prepare(for segue..etc."
     }
     
          //these are the Product Line options from EPex
@@ -190,19 +134,32 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             
             var searchArr = [ownerName!, projectID!, productLine]
 
-            var j = 0
-            while j <= 2 {
-                if searchArr[j] == "" {
-                    searchArr[j] = "None"
+            if(searchArr[0] == "" && searchArr[1] == "") {
+                createAlert(titleText: "Error:", messageText: "Search must include at least owner name, project ID, or both.")
+            } else {
+                var j = 0
+                while j <= 2 {
+                    if searchArr[j] == "" {
+                        searchArr[j] = "None"
+                    }
+                    j += 1
                 }
-                j += 1
+            
+                print(searchArr)
+                
+                nextViewController.searchArr = searchArr
             }
-            
-            print(searchArr)
-            
-            nextViewController.searchArr = searchArr
         }
     }
+    
+    func createAlert(titleText: String, messageText: String) {
+        let alert = UIAlertController(title: titleText, message: messageText, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     
      @IBAction func unwindToSearchVC(segue: UIStoryboardSegue) {}

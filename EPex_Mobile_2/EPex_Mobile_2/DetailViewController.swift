@@ -21,10 +21,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var table2: UITableView!
     @IBOutlet var datePicker: UIDatePicker!
     
-    var tasksArr = ["Add Buttons", "Fix Display", "Read Data From Database"]
+   // var tasksArr = ["Add Buttons", "Fix Display", "Read Data From Database"]
+    var tasksArr = ["TG0", "TG1", "TG3", "TG6", "PCB", "TG9", "CID"]
     
-    var commitDates:[String] = ["06/29/2017", "10/26/2017", "01/13/2017"]
-    var actualDates:[String] = ["__/__/____", "__/__/____", "__/__/____"]
+    var commitDates:[String] = ["06/29/2017", "10/26/2017", "01/13/2017", "06/29/2017", "06/29/2017", "06/29/2017", "06/29/2017"]
+    var actualDates:[String] = ["__/__/____", "__/__/____", "__/__/____", "__/__/____", "__/__/____", "__/__/____", "__/__/____"]
     
     
     
@@ -37,6 +38,9 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             actualDates[selectedRow] = savedDate_String
             table2.reloadData()
+            
+            //return to current date:
+            datePicker.date = Date()
             
             selectedRow = -1
         }
